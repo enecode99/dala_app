@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "934618294752",
+    "project_id": "jengaleo-bdc95",
+    "storage_bucket": "jengaleo-bdc95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934618294752:android:e17fc392c81dc0fdaca385",
+        "android_client_info": {
+          "package_name": "com.increatetech.dala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934618294752-dqjbtglhs884huporm7uogg4o76vaj2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.increatetech.dala",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "934618294752-4a4ahlk1i8gl430ltplodl0a4ghtc7rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHs_k7w--drnieCZ0NJl4imvAmTRreN1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934618294752-4a4ahlk1i8gl430ltplodl0a4ghtc7rd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934618294752-01hki1t9uph2bjbeogcj0vp8la5vfoq5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.increatetech.jengaleo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934618294752:android:e1cc4212e1953cbdaca385",
+        "android_client_info": {
+          "package_name": "com.increatetech.jengaleo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934618294752-emjsesii489o6fur0uvmb3gdptogu9rf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.increatetech.jengaleo",
+            "certificate_hash": "23f883d81fd758ca1a47ac3d2cd34d0c3d3c8110"
+          }
+        },
+        {
+          "client_id": "934618294752-nq49vfsbbp0iee7lm7q2uu0g332ch9nd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.increatetech.jengaleo",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "934618294752-4a4ahlk1i8gl430ltplodl0a4ghtc7rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHs_k7w--drnieCZ0NJl4imvAmTRreN1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934618294752-4a4ahlk1i8gl430ltplodl0a4ghtc7rd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "934618294752-01hki1t9uph2bjbeogcj0vp8la5vfoq5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.increatetech.jengaleo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

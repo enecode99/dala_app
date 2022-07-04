@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>934618294752-17vk064jvfjvc24s13g0rmjdjg17ld43.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.934618294752-17vk064jvfjvc24s13g0rmjdjg17ld43</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>934618294752-dqjbtglhs884huporm7uogg4o76vaj2u.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDbziV9NiNhm4IJWe5G5WDr8jjHOk5ru4M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>934618294752</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.increatetech.dala</string>
+	<key>PROJECT_ID</key>
+	<string>jengaleo-bdc95</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jengaleo-bdc95.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:934618294752:ios:f8c4189808819851aca385</string>
+</dict>
+</plist>

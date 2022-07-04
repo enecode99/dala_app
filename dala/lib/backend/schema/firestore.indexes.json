@@ -1,0 +1,32 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "transactions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "transaction_user",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "transaction_date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "transactions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "transaction_user",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "transaction_date",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ]
+}
