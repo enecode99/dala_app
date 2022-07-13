@@ -1,6 +1,5 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -23,7 +22,6 @@ class CardRequestWidget extends StatefulWidget {
 }
 
 class _CardRequestWidgetState extends State<CardRequestWidget> {
-  String dropDownValue;
   TextEditingController textController;
 
   @override
@@ -38,7 +36,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
       child: Container(
         width: double.infinity,
-        height: 300,
+        height: 200,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -59,6 +57,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 5),
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
@@ -140,69 +139,6 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryBackground,
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'diq7epsa' /* Aina ya Kadi. */,
-                          ),
-                          textAlign: TextAlign.start,
-                          style:
-                              FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Open Sans',
-                                    fontSize: 14,
-                                  ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-                        child: FlutterFlowDropDown(
-                          initialOption: dropDownValue ??=
-                              FFLocalizations.of(context).getText(
-                            'lmuyk8h0' /* Living Room Furnishing */,
-                          ),
-                          options: [
-                            FFLocalizations.of(context).getText(
-                              '7cbltxk8' /* Room Furnishing */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'id9lf84t' /* Dinning Furnishing */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              '0lh6nhg3' /* Living Room Furnishing */,
-                            ),
-                            FFLocalizations.of(context).getText(
-                              'whyj7sut' /* Kitchen Furnishing */,
-                            )
-                          ],
-                          onChanged: (val) =>
-                              setState(() => dropDownValue = val),
-                          width: 350,
-                          height: 50,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Open Sans',
-                                    color: Colors.black,
-                                  ),
-                          hintText: FFLocalizations.of(context).getText(
-                            'id690in7' /* chagua... */,
-                          ),
-                          fillColor: Colors.white,
-                          elevation: 2,
-                          borderColor:
-                              FlutterFlowTheme.of(context).secondaryText,
-                          borderWidth: 0,
-                          borderRadius: 1,
-                          margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
-                          hidesUnderline: true,
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
               ),
               Padding(
@@ -221,61 +157,57 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    logFirebaseEvent('CARD_REQUEST_COMP_TUMA_BTN_ON_TAP');
-                    logFirebaseEvent('Button_Backend-Call');
+              FFButtonWidget(
+                onPressed: () async {
+                  logFirebaseEvent('CARD_REQUEST_COMP_TUMA_BTN_ON_TAP');
+                  logFirebaseEvent('Button_Backend-Call');
 
-                    final premiumCardCreateData = createPremiumCardRecordData(
-                      cardUsername: textController.text,
-                      cardName: dropDownValue,
-                      cardEmail: currentUserEmail,
-                      cardPhone: currentPhoneNumber,
-                      cardTime: getCurrentTimestamp,
-                    );
-                    await PremiumCardRecord.collection
-                        .doc()
-                        .set(premiumCardCreateData);
-                    logFirebaseEvent('Button_Alert-Dialog');
-                    await showDialog(
-                      context: context,
-                      builder: (alertDialogContext) {
-                        return AlertDialog(
-                          title: Text('Dala Taarifa'),
-                          content: Text(
-                              'Tumepokea ujumbe wako, tutakufikia hivi punde kukupa taarifa zaidi.'),
-                          actions: [
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pop(alertDialogContext),
-                              child: Text('Ok'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                    logFirebaseEvent('Button_Navigate-Back');
-                    Navigator.pop(context);
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'v6k6vd58' /* Tuma */,
+                  final premiumCardCreateData = createPremiumCardRecordData(
+                    cardUsername: textController.text,
+                    cardName: 'Service Offer',
+                    cardEmail: currentUserEmail,
+                    cardPhone: currentPhoneNumber,
+                    cardTime: getCurrentTimestamp,
+                  );
+                  await PremiumCardRecord.collection
+                      .doc()
+                      .set(premiumCardCreateData);
+                  logFirebaseEvent('Button_Alert-Dialog');
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text('Dala Taarifa'),
+                        content: Text(
+                            'Tumepokea ujumbe wako, tutakufikia hivi punde kukupa taarifa zaidi.'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(alertDialogContext),
+                            child: Text('Ok'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                  logFirebaseEvent('Button_Navigate-Back');
+                  Navigator.pop(context);
+                },
+                text: FFLocalizations.of(context).getText(
+                  'v6k6vd58' /* Tuma */,
+                ),
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: FlutterFlowTheme.of(context).primaryColor,
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Open Sans',
+                        color: Colors.white,
+                      ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
                   ),
-                  options: FFButtonOptions(
-                    width: 130,
-                    height: 40,
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                          fontFamily: 'Open Sans',
-                          color: Colors.white,
-                        ),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: 12,
-                  ),
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ],

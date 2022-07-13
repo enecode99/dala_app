@@ -1373,38 +1373,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // CardPage
   {
     'tn954wjq': {
-      'sw': 'OFA YA KUELEKEA SABASABA',
-      'en': 'OFFER TO SABASABA',
+      'sw': 'OFA OFA OFA',
+      'en': 'OFA OFA OFA',
     },
     'tzciqa8s': {
-      'sw': 'KADI YA NAJIPANGA LEO ',
-      'en': 'NAJIPANGA LEO CARD',
+      'sw': 'JE WAJUA?',
+      'en': 'JE WAJUA?',
     },
     'b3vuv5j4': {
       'sw':
-          'Kama bado unajipanga, ukiwa na kadi ya NAJIPANGA LEO itakuwezesha kuweka vitu vya ndani BURE siku ukijenga na sisi.\nVitu hivyo ni kama runinga, makochi, majiko, vitanda, makabati n.k ',
+          'Labda utakuwa teyari kuanza ujenzi kwa huduma yetu baada ya miezi 2, miezi 6, mwaka mmoja, au miaka 3. Lakini unajua kwamba tunaweza anza kukuhudumia leo BURE! ukiwa unaendelea kujipanga? Ili siku ukiwa tayari mambo yaende kwa uharaka.',
       'en':
-          'Kama bado unajipanga, ukiwa na kadi ya NAJIPANGA LEO itakuwezesha kuweka vitu vya ndani BURE siku ukijenga na sisi.\nVitu hivyo ni kama runinga, makochi, majiko, vitanda, makabati n.k ',
+          'Labda utakuwa teyari kuanza ujenzi kwa huduma yetu baada ya miezi 2, miezi 6, mwaka mmoja, au miaka 3. Lakini unajua kwamba tunaweza anza kukuhudumia leo BURE! ukiwa unaendelea kujipanga? Ili siku ukiwa tayari mambo yaende kwa uharaka.',
     },
     'hm4r0nji': {
-      'sw': 'SHARTI',
-      'en': 'SHARTI',
+      'sw': 'FAIDA',
+      'en': 'FAIDA',
     },
     'oial1k1h': {
       'sw':
-          'Utatakiwa kuchagua uwekewekewa vitu vyote vya sebuleni, jikoni, chumbani, au sehemu ya kulia.',
+          'Faida kubwa utakayopata ni kuwa siku utakayokuwa teyari kwaajiri ya ujenzi kwa huduma yetu hautahitajika kulipa gharama za huduma yetu ambayo ni 1,200,000/= [Huduma zetu ni mkopo wa ujenzi, kutengeneza BOQ na ramani, ununuzi wa vifaa vya ujenzi na usimamizi wa ujenzi].',
       'en':
-          'Utatakiwa kuchagua uwekewekewa vitu vyote vya sebuleni, jikoni, chumbani, au sehemu ya kulia.',
+          'Faida kubwa utakayopata ni kuwa siku utakayokuwa teyari kwaajiri ya ujenzi kwa huduma yetu hautahitajika kulipa gharama za huduma yetu ambayo ni 1,200,000/= [Huduma zetu ni mkopo wa ujenzi, kutengeneza BOQ na ramani, ununuzi wa vifaa vya ujenzi na usimamizi wa ujenzi].',
     },
     'w69gapxm': {
       'sw':
-          'Tembelea ofisi zetu ujipatie kadi ya NAJIPANGA LEO sasa kwa kulipa 100,000/= au tuma maombi tukuletee kadi popote ulipo ndani ya Dar-es-Salaam.',
+          'Ofa hii ni kwa wateja wetu 25 tu. Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
       'en':
-          'Tembelea ofisi zetu ujipatie kadi ya NAJIPANGA LEO sasa kwa kulipa 100,000/= au tuma maombi tukuletee kadi popote ulipo ndani ya Dar-es-Salaam.',
+          'Ofa hii ni kwa wateja wetu 25 tu. Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
     },
     'lxzdc7h7': {
-      'sw': 'TUMA',
-      'en': 'SEND',
+      'sw': 'FUNGUA FAILI',
+      'en': 'FUNGUA FAILI',
     },
     'd9qq8088': {
       'sw': 'Kadi ya Jipange ',
@@ -2197,34 +2197,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '9fggl17j': {
       'sw': '',
       'en': '',
-    },
-    'diq7epsa': {
-      'sw': 'Aina ya Kadi.',
-      'en': 'Type of Card.',
-    },
-    'lmuyk8h0': {
-      'sw': 'Living Room Furnishing',
-      'en': 'Living Room Furnishing',
-    },
-    '7cbltxk8': {
-      'sw': 'Room Furnishing',
-      'en': 'Room Furnishing',
-    },
-    'id9lf84t': {
-      'sw': 'Dinning Furnishing',
-      'en': 'Dinning Furnishing',
-    },
-    '0lh6nhg3': {
-      'sw': 'Living Room Furnishing',
-      'en': 'Living Room Furnishing',
-    },
-    'whyj7sut': {
-      'sw': 'Kitchen Furnishing',
-      'en': 'Kitchen Furnishing',
-    },
-    'id690in7': {
-      'sw': 'chagua...',
-      'en': 'Please select ...',
     },
     'v6k6vd58': {
       'sw': 'Tuma',

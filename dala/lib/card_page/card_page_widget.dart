@@ -74,7 +74,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'tn954wjq' /* OFA YA KUELEKEA SABASABA */,
+                                'tn954wjq' /* OFA OFA OFA */,
                               ),
                               style:
                                   FlutterFlowTheme.of(context).title1.override(
@@ -95,7 +95,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'tzciqa8s' /* KADI YA NAJIPANGA LEO  */,
+                                'tzciqa8s' /* JE WAJUA? */,
                               ),
                               style: FlutterFlowTheme.of(context).bodyText1,
                             ),
@@ -113,7 +113,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'b3vuv5j4' /* Kama bado unajipanga, ukiwa na... */,
+                                    'b3vuv5j4' /* Labda utakuwa teyari kuanza uj... */,
                                   ),
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
@@ -129,7 +129,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'hm4r0nji' /* SHARTI */,
+                                'hm4r0nji' /* FAIDA */,
                               ),
                               style: FlutterFlowTheme.of(context).bodyText1,
                             ),
@@ -147,7 +147,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'oial1k1h' /* Utatakiwa kuchagua uwekewekewa... */,
+                                    'oial1k1h' /* Faida kubwa utakayopata ni kuw... */,
                                   ),
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
@@ -167,7 +167,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'w69gapxm' /* Tembelea ofisi zetu ujipatie k... */,
+                                    'w69gapxm' /* Ofa hii ni kwa wateja wetu 25 ... */,
                                   ),
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
@@ -178,7 +178,8 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          logFirebaseEvent('CARD_PAGE_PAGE_TUMA_BTN_ON_TAP');
+                          logFirebaseEvent(
+                              'CARD_PAGE_PAGE_FUNGUA_FAILI_BTN_ON_TAP');
                           logFirebaseEvent('Button_Bottom-Sheet');
                           await showModalBottomSheet(
                             isScrollControlled: true,
@@ -209,12 +210,14 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                               );
                             },
                           );
+                          logFirebaseEvent('Button_Google-Analytics-Event');
+                          logFirebaseEvent('Open File');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'lxzdc7h7' /* TUMA */,
+                          'lxzdc7h7' /* FUNGUA FAILI */,
                         ),
                         options: FFButtonOptions(
-                          width: 130,
+                          width: 145,
                           height: 50,
                           color: FlutterFlowTheme.of(context).primaryColor,
                           textStyle:
@@ -229,7 +232,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                             color: Colors.transparent,
                             width: 1,
                           ),
-                          borderRadius: 8,
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                     ],

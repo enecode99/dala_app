@@ -106,7 +106,7 @@ class _RemovePendingWidgetState extends State<RemovePendingWidget> {
                         color: Colors.transparent,
                         width: 1,
                       ),
-                      borderRadius: 40,
+                      borderRadius: BorderRadius.circular(40),
                     ),
                   ),
                   FFButtonWidget(
@@ -143,7 +143,7 @@ class _RemovePendingWidgetState extends State<RemovePendingWidget> {
                         color: Colors.transparent,
                         width: 1,
                       ),
-                      borderRadius: 40,
+                      borderRadius: BorderRadius.circular(40),
                     ),
                   ),
                 ],

@@ -479,7 +479,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         color: Colors.transparent,
                         width: 1,
                       ),
-                      borderRadius: 12,
+                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                 ),
@@ -562,7 +562,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           color: Colors.transparent,
                                           width: 1,
                                         ),
-                                        borderRadius: 12,
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),
@@ -903,7 +903,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           borderRadius:
                                               BorderRadius.circular(15),
                                           child: Image.asset(
-                                            'assets/images/20220621_160305_0000[1].png',
+                                            'assets/images/20220711_150638_0000[1].png',
                                             width: double.infinity,
                                             height: 180,
                                             fit: BoxFit.fill,
@@ -913,10 +913,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(0.88, 0.66),
+                                          AlignmentDirectional(0.88, 0.93),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 135, 0, 5),
+                                            10, 137, 0, 5),
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             logFirebaseEvent(
@@ -940,8 +940,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             'as5i6c7a' /* Fungua */,
                                           ),
                                           options: FFButtonOptions(
-                                            width: 130,
-                                            height: 40,
+                                            width: 100,
+                                            height: 35,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,
                                             textStyle:
@@ -958,7 +958,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               color: Colors.transparent,
                                               width: 1,
                                             ),
-                                            borderRadius: 12,
+                                            borderRadius:
+                                                BorderRadius.circular(12),
                                           ),
                                         ),
                                       ),
@@ -971,7 +972,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Image.asset(
                                           'assets/images/offer.gif',
                                           width: 100,
-                                          height: 130,
+                                          height: 80,
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1040,7 +1041,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           color: Colors.transparent,
                                           width: 1,
                                         ),
-                                        borderRadius: 12,
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),
@@ -1391,7 +1392,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           color: Colors.transparent,
                                           width: 1,
                                         ),
-                                        borderRadius: 12,
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),
@@ -1768,7 +1769,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           color: Colors.transparent,
                                           width: 1,
                                         ),
-                                        borderRadius: 12,
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),

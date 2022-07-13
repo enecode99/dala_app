@@ -412,7 +412,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                     color: Colors.transparent,
                     width: 1,
                   ),
-                  borderRadius: 12,
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ),
@@ -560,7 +560,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                                     color: Colors.transparent,
                                     width: 1,
                                   ),
-                                  borderRadius: 12,
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                               ),
                             ),
@@ -1212,7 +1212,9 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                                                                 .transparent,
                                                             width: 1,
                                                           ),
-                                                          borderRadius: 12,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(12),
                                                         ),
                                                       ),
                                                   ],
