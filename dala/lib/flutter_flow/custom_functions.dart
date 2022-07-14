@@ -153,7 +153,7 @@ int deffPaid(
 
 bool minTrans(int amount) {
   // Return true if amount is greater than of equal to 100000, else false.
-  return amount >= 100000;
+  return amount >= 1000;
 }
 
 int midPrice(int price) {

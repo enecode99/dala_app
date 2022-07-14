@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../card_page/card_page_widget.dart';
 import '../change_language_page/change_language_page_widget.dart';
 import '../components/home_req_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -12,7 +13,6 @@ import '../my_card_page/my_card_page_widget.dart';
 import '../policy/policy_widget.dart';
 import '../renovation_service_page/renovation_service_page_widget.dart';
 import '../sign_in_page/sign_in_page_widget.dart';
-import '../signature_page/signature_page_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -321,7 +321,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'wyowrz2m' /* Kadi Yangu */,
+                          'wyowrz2m' /* Faili langu */,
                         ),
                         style: FlutterFlowTheme.of(context).title3.override(
                               fontFamily: 'Open Sans',
@@ -346,7 +346,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
                       type: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
                       reverseDuration: Duration(milliseconds: 0),
-                      child: SignaturePageWidget(),
+                      child: CardPageWidget(),
                     ),
                   );
                 },
@@ -363,7 +363,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'tvkwbino' /* Taarifa za Kadi */,
+                          'tvkwbino' /* Taarifa za Faili */,
                         ),
                         style: FlutterFlowTheme.of(context).title3.override(
                               fontFamily: 'Open Sans',

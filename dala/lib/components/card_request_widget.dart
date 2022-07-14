@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -22,7 +23,9 @@ class CardRequestWidget extends StatefulWidget {
 }
 
 class _CardRequestWidgetState extends State<CardRequestWidget> {
+  String dropDownValue1;
   TextEditingController textController;
+  String dropDownValue2;
 
   @override
   void initState() {
@@ -36,7 +39,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
       child: Container(
         width: double.infinity,
-        height: 200,
+        height: 500,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -208,6 +211,116 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'e62qltlv' /* Shughuli */,
+                        ),
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).subtitle2.override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 14,
+                            ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                child: FlutterFlowDropDown(
+                  initialOption: dropDownValue1 ??=
+                      FFLocalizations.of(context).getText(
+                    'xjpbfs5l' /* Mfanyabiashara */,
+                  ),
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      'xc3zzq1e' /* Mfanyakazi */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      '3b877ocd' /* Mfanyabiashara */,
+                    )
+                  ],
+                  onChanged: (val) => setState(() => dropDownValue1 = val),
+                  width: double.infinity,
+                  height: 50,
+                  textStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Open Sans',
+                        color: Colors.black,
+                      ),
+                  hintText: FFLocalizations.of(context).getText(
+                    'aycpbe8u' /* Please select... */,
+                  ),
+                  fillColor: Colors.white,
+                  elevation: 2,
+                  borderColor: FlutterFlowTheme.of(context).primaryText,
+                  borderWidth: 0,
+                  borderRadius: 0,
+                  margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                  hidesUnderline: true,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '8q116adn' /* Shughuli */,
+                        ),
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).subtitle2.override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 14,
+                            ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                child: FlutterFlowDropDown(
+                  initialOption: dropDownValue2 ??=
+                      FFLocalizations.of(context).getText(
+                    'y59rrgfm' /* Mfanyabiashara */,
+                  ),
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      'ejgr3x5p' /* Mfanyakazi */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'lv9lolg8' /* Mfanyabiashara */,
+                    )
+                  ],
+                  onChanged: (val) => setState(() => dropDownValue2 = val),
+                  width: double.infinity,
+                  height: 50,
+                  textStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Open Sans',
+                        color: Colors.black,
+                      ),
+                  hintText: FFLocalizations.of(context).getText(
+                    '0ugp4kbz' /* Please select... */,
+                  ),
+                  fillColor: Colors.white,
+                  elevation: 2,
+                  borderColor: FlutterFlowTheme.of(context).primaryText,
+                  borderWidth: 0,
+                  borderRadius: 0,
+                  margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                  hidesUnderline: true,
                 ),
               ),
             ],

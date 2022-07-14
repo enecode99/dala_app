@@ -9,6 +9,7 @@ import 'transactions_record.dart';
 import 'mortgage_request_record.dart';
 import 'home_request_record.dart';
 import 'premium_card_record.dart';
+import 'user_files_record.dart';
 
 import 'index.dart';
 
@@ -28,6 +29,7 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   MortgageRequestRecord,
   HomeRequestRecord,
   PremiumCardRecord,
+  UserFilesRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

@@ -16,7 +16,6 @@ import '../my_card_page/my_card_page_widget.dart';
 import '../policy/policy_widget.dart';
 import '../renovation_service_page/renovation_service_page_widget.dart';
 import '../sign_in_page/sign_in_page_widget.dart';
-import '../signature_page/signature_page_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -388,7 +387,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'twr5gdub' /* Kadi Yangu */,
+                              'twr5gdub' /* Faili Langu */,
                             ),
                             style: FlutterFlowTheme.of(context).title3.override(
                                   fontFamily: 'Open Sans',
@@ -414,7 +413,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           type: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
                           reverseDuration: Duration(milliseconds: 0),
-                          child: SignaturePageWidget(),
+                          child: CardPageWidget(),
                         ),
                       );
                     },
@@ -431,7 +430,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              '07o8t9jj' /* Taarifa za Kadi */,
+                              '07o8t9jj' /* Taarifa za Faili */,
                             ),
                             style: FlutterFlowTheme.of(context).title3.override(
                                   fontFamily: 'Open Sans',
@@ -903,7 +902,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           borderRadius:
                                               BorderRadius.circular(15),
                                           child: Image.asset(
-                                            'assets/images/20220711_150638_0000[1].png',
+                                            'assets/images/20220714_174417_0000.png',
                                             width: double.infinity,
                                             height: 180,
                                             fit: BoxFit.fill,
@@ -966,7 +965,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(0.73, -0.3),
+                                          AlignmentDirectional(0.91, -0.78),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
                                         child: Image.asset(

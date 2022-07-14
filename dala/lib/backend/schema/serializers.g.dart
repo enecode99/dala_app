@@ -15,6 +15,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(MortgageRequestRecord.serializer)
       ..add(PremiumCardRecord.serializer)
       ..add(TransactionsRecord.serializer)
+      ..add(UserFilesRecord.serializer)
       ..add(UsersRecord.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [

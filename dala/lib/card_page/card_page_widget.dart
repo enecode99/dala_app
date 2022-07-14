@@ -1,4 +1,4 @@
-import '../components/card_request_widget.dart';
+import '../components/file_request_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -74,7 +74,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'tn954wjq' /* OFA OFA OFA */,
+                                'tn954wjq' /* OFA YA LEO TU */,
                               ),
                               style:
                                   FlutterFlowTheme.of(context).title1.override(
@@ -113,41 +113,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'b3vuv5j4' /* Labda utakuwa teyari kuanza uj... */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context).bodyText2,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'hm4r0nji' /* FAIDA */,
-                              ),
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'oial1k1h' /* Faida kubwa utakayopata ni kuw... */,
+                                    'b3vuv5j4' /* Fungua faili la huduma yetu Le... */,
                                   ),
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
@@ -167,7 +133,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'w69gapxm' /* Ofa hii ni kwa wateja wetu 25 ... */,
+                                    'w69gapxm' /* Anza kupata huduma yetu kwa ku... */,
                                   ),
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
@@ -188,30 +154,10 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                             builder: (context) {
                               return Padding(
                                 padding: MediaQuery.of(context).viewInsets,
-                                child: CardRequestWidget(),
+                                child: FileRequestWidget(),
                               );
                             },
                           );
-                          logFirebaseEvent('Button_Alert-Dialog');
-                          await showDialog(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title: Text('Dala Taarifa'),
-                                content: Text(
-                                    'Tumepokea ujumbe wako, tutakufikia hivi punde kukupa taarifa zaidi.'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext),
-                                    child: Text('Ok'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                          logFirebaseEvent('Button_Google-Analytics-Event');
-                          logFirebaseEvent('Open File');
                         },
                         text: FFLocalizations.of(context).getText(
                           'lxzdc7h7' /* FUNGUA FAILI */,

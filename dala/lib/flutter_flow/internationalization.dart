@@ -254,12 +254,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Change Language',
     },
     'twr5gdub': {
-      'sw': 'Kadi Yangu',
-      'en': 'My Card',
+      'sw': 'Faili Langu',
+      'en': 'My File',
     },
     '07o8t9jj': {
-      'sw': 'Taarifa za Kadi',
-      'en': 'Card InfoInformation ',
+      'sw': 'Taarifa za Faili',
+      'en': 'File Information ',
     },
     '7w2heh2d': {
       'sw': 'Sign Out',
@@ -275,7 +275,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qns3u34s': {
       'sw': 'Fungua',
-      'en': 'View',
+      'en': 'Open',
     },
     'osuov6ka': {
       'sw': 'BEI:',
@@ -287,7 +287,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'as5i6c7a': {
       'sw': 'Fungua',
-      'en': 'View',
+      'en': 'Open',
     },
     '4ohutev4': {
       'sw': 'Nyumba za bei 51mil - 100 mil',
@@ -295,7 +295,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jml0h5qk': {
       'sw': 'Fungua',
-      'en': 'View',
+      'en': 'Open',
     },
     '50al009j': {
       'sw': 'BEI:',
@@ -311,7 +311,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'keqm8im7': {
       'sw': 'Fungua',
-      'en': 'View',
+      'en': 'Open',
     },
     'yrqqb9r7': {
       'sw': 'BEI:',
@@ -373,12 +373,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Change Language',
     },
     'wyowrz2m': {
-      'sw': 'Kadi Yangu',
-      'en': 'My Card',
+      'sw': 'Faili langu',
+      'en': 'My File',
     },
     'tvkwbino': {
-      'sw': 'Taarifa za Kadi',
-      'en': 'Card InfoInformation ',
+      'sw': 'Taarifa za Faili',
+      'en': 'File Information ',
     },
     'hyergxpe': {
       'sw': 'Sign Out',
@@ -464,12 +464,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Change Language',
     },
     '0ftv93yh': {
-      'sw': 'Kadi Yangu',
-      'en': 'My Card',
+      'sw': 'Faili langu',
+      'en': 'My File',
     },
     'ilft10dg': {
-      'sw': 'Taarifa za Kadi',
-      'en': 'Card InfoInformation ',
+      'sw': 'Taarifa za Faili',
+      'en': 'File Information ',
     },
     'p79x56it': {
       'sw': 'Sign Out',
@@ -498,6 +498,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
+    '06ib3yh8': {
+      'sw': 'OFA YAKO',
+      'en': 'OFA YAKO',
+    },
+    'ci0updc6': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    '6gg58ur3': {
+      'sw': '0.000/=',
+      'en': '0.000/=',
+    },
+    'xw5gsk96': {
+      'sw': 'FUNGUA OFA YAKO',
+      'en': 'FUNGUA OFA YAKO',
+    },
     '9274fmss': {
       'sw': 'Kiwango: Kati',
       'en': 'Standard',
@@ -510,6 +526,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
+    'bvm0jvqo': {
+      'sw': 'OFA YAKO',
+      'en': 'OFA YAKO',
+    },
+    'fhkrech0': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    'kooyzt53': {
+      'sw': '0.000/=',
+      'en': '0.000/=',
+    },
+    'ju0y0jga': {
+      'sw': 'FUNGUA OFA YAKO',
+      'en': 'FUNGUA OFA YAKO',
+    },
     '1npucdxy': {
       'sw': 'Kiwango: Juu',
       'en': 'Premium',
@@ -521,6 +553,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'ru94ae7j': {
       'sw': 'LIPA:',
       'en': 'PAY:',
+    },
+    'hpgftlq3': {
+      'sw': 'OFA YAKO',
+      'en': 'OFA YAKO',
+    },
+    'g6f7keu7': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    '8a0ea362': {
+      'sw': '0.000/=',
+      'en': '0.000/=',
+    },
+    'pjo89omq': {
+      'sw': 'FUNGUA OFA YAKO',
+      'en': 'FUNGUA OFA YAKO',
     },
     'skmk7lnh': {
       'sw': 'Huduma',
@@ -1373,8 +1421,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // CardPage
   {
     'tn954wjq': {
-      'sw': 'OFA OFA OFA',
-      'en': 'OFA OFA OFA',
+      'sw': 'OFA YA LEO TU',
+      'en': 'OFA YA LEO TU',
     },
     'tzciqa8s': {
       'sw': 'JE WAJUA?',
@@ -1382,25 +1430,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'b3vuv5j4': {
       'sw':
-          'Labda utakuwa teyari kuanza ujenzi kwa huduma yetu baada ya miezi 2, miezi 6, mwaka mmoja, au miaka 3. Lakini unajua kwamba tunaweza anza kukuhudumia leo BURE! ukiwa unaendelea kujipanga? Ili siku ukiwa tayari mambo yaende kwa uharaka.',
+          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing bila kulipa malipo yoyote ya mwanzo (0.00 Tsh).\nKisha utailipa pesa iliyotumika kujenga nyumba na riba yake kidogo kidogo kwa muda wa mpaka miaka 25 ukiwa kwenye mjengo wako.\nGharama za kufungua faili ni 15,000 /= Tu.',
       'en':
-          'Labda utakuwa teyari kuanza ujenzi kwa huduma yetu baada ya miezi 2, miezi 6, mwaka mmoja, au miaka 3. Lakini unajua kwamba tunaweza anza kukuhudumia leo BURE! ukiwa unaendelea kujipanga? Ili siku ukiwa tayari mambo yaende kwa uharaka.',
-    },
-    'hm4r0nji': {
-      'sw': 'FAIDA',
-      'en': 'FAIDA',
-    },
-    'oial1k1h': {
-      'sw':
-          'Faida kubwa utakayopata ni kuwa siku utakayokuwa teyari kwaajiri ya ujenzi kwa huduma yetu hautahitajika kulipa gharama za huduma yetu ambayo ni 1,200,000/= [Huduma zetu ni mkopo wa ujenzi, kutengeneza BOQ na ramani, ununuzi wa vifaa vya ujenzi na usimamizi wa ujenzi].',
-      'en':
-          'Faida kubwa utakayopata ni kuwa siku utakayokuwa teyari kwaajiri ya ujenzi kwa huduma yetu hautahitajika kulipa gharama za huduma yetu ambayo ni 1,200,000/= [Huduma zetu ni mkopo wa ujenzi, kutengeneza BOQ na ramani, ununuzi wa vifaa vya ujenzi na usimamizi wa ujenzi].',
+          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing bila kulipa malipo yoyote ya mwanzo (0.00 Tsh).\nKisha utailipa pesa iliyotumika kujenga nyumba na riba yake kidogo kidogo kwa muda wa mpaka miaka 25 ukiwa kwenye mjengo wako.\nGharama za kufungua faili ni 15,000 /= Tu.',
     },
     'w69gapxm': {
       'sw':
-          'Ofa hii ni kwa wateja wetu 25 tu. Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
+          'Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
       'en':
-          'Ofa hii ni kwa wateja wetu 25 tu. Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
+          'Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
     },
     'lxzdc7h7': {
       'sw': 'FUNGUA FAILI',
@@ -1422,17 +1460,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Card',
     },
     'zxkjnhq0': {
-      'sw': 'Home',
-      'en': '',
-    },
-  },
-  // SignaturePage
-  {
-    'b6bdk98z': {
-      'sw': 'Saini',
-      'en': 'Signature',
-    },
-    'gj9rf7al': {
       'sw': 'Home',
       'en': '',
     },
@@ -2202,76 +2229,66 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'Tuma',
       'en': 'Send',
     },
-  },
-  // InterestReq
-  {
-    'o4f5ozrq': {
-      'sw': 'Kipato cha mwezi',
-      'en': 'Averge Monthly Income (Monthly Income)',
-    },
-    'vthowgg0': {
-      'sw': 'Chini ya 1,000,000/=',
-      'en': 'Below 1,000,000/=',
-    },
-    '3vurm5su': {
-      'sw': 'Kati ya: 1,000,000/= mpaka 2,000,000/=',
-      'en': 'Range: From 1,000,000/= to 2,000,000/=',
-    },
-    'dy8gp2xu': {
-      'sw': 'Kati ya:  2,000,000/= mpaka 3,000,000/=',
-      'en': 'Range: From 2,000,000/=  to 3,500,000/=',
-    },
-    'obyx1fqc': {
-      'sw': 'Juu ya 3,000,000/= ',
-      'en': 'Above 3,000,000/=',
-    },
-    'c0yf5l7q': {
-      'sw': 'chagua...',
-      'en': 'Please select ...',
-    },
-    '566elrks': {
-      'sw': 'Mkopo wa miaka mingapi?',
-      'en': 'Loan of how long?',
-    },
-    'zou3mao8': {
-      'sw': 'Miaka 5 au chini',
-      'en': '5 years or below',
-    },
-    'fiwqi1tt': {
-      'sw': 'Kati ya: miaka 6 mpaka 10',
-      'en': 'Range: From 6 years to 10',
-    },
-    'y818lp8g': {
-      'sw': 'Kati ya: miaka 11 mpaka 15',
-      'en': 'Range: From 11 years to 15',
-    },
-    'hguvz1z6': {
-      'sw': 'Kati ya: miaka 16 mpaka 25',
-      'en': 'Range: From 16 years to 25',
-    },
-    'x28njvj9': {
-      'sw': 'Chagua...',
-      'en': 'Please select ...',
-    },
-    'p4x1xpr2': {
-      'sw': 'Kazi',
+    'e62qltlv': {
+      'sw': 'Shughuli',
       'en': 'Employment Status',
     },
-    'qxhwyrqu': {
+    'xjpbfs5l': {
+      'sw': 'Mfanyabiashara',
+      'en': 'Entrepreneur ',
+    },
+    'xc3zzq1e': {
       'sw': 'Mfanyakazi',
       'en': 'Employee ',
     },
-    'i55j2sgy': {
+    '3b877ocd': {
       'sw': 'Mfanyabiashara',
       'en': 'Entrepreneur',
     },
-    'h8fcfyec': {
-      'sw': 'Chagua...',
-      'en': 'Please select ...',
+    'aycpbe8u': {
+      'sw': 'Please select...',
+      'en': '',
     },
-    'iyan7x2r': {
-      'sw': 'Tuma',
-      'en': 'Send',
+    '8q116adn': {
+      'sw': 'Shughuli',
+      'en': 'Employment Status',
+    },
+    'y59rrgfm': {
+      'sw': 'Mfanyabiashara',
+      'en': 'Entrepreneur ',
+    },
+    'ejgr3x5p': {
+      'sw': 'Mfanyakazi',
+      'en': 'Employee ',
+    },
+    'lv9lolg8': {
+      'sw': 'Mfanyabiashara',
+      'en': 'Entrepreneur',
+    },
+    '0ugp4kbz': {
+      'sw': 'Please select...',
+      'en': '',
+    },
+  },
+  // InterestReq
+  {
+    'qwg4td89': {
+      'sw':
+          'Mkopo ukilipwa Kwa muda wa;\n-Mwaka mmoja riba ni 1.5% ya mkopo\n-Miaka 2 riba ni 3% ya mkopo\n-Miaka 3 riba ni 4.5% ya mkopo\n-Miaka 4 riba ni 6% ya mkopo\n-Miaka 5 riba ni 7.5% ya mkopo\n-Miaka 6 riba ni 9% ya mkopo\n-Miaka 7 riba ni 10.5% ya mkopo\n-Miaka 8 riba ni 12% ya mkopo\n-Miaka 9 riba ni 13.5% ya mkopo\n-Miaka 10 riba ni 15% ya mkopo',
+      'en':
+          'Mkopo ukilipwa Kwa muda wa;\n-Mwaka mmoja riba ni 1.5% ya mkopo\n-Miaka 2 riba ni 3% ya mkopo\n-Miaka 3 riba ni 4.5% ya mkopo\n-Miaka 4 riba ni 6% ya mkopo\n-Miaka 5 riba ni 7.5% ya mkopo\n-Miaka 6 riba ni 9% ya mkopo\n-Miaka 7 riba ni 10.5% ya mkopo\n-Miaka 8 riba ni 12% ya mkopo\n-Miaka 9 riba ni 13.5% ya mkopo\n-Miaka 10 riba ni 15% ya mkopo',
+    },
+    'v69oiykc': {
+      'sw':
+          'MFANO: Kama ukichukua mkopo wa miaka 10 alafu ni nyumba ya 100 milioni utalipa 115 milioni, hapo ni mpaka riba.',
+      'en':
+          'MFANO: Kama ukichukua mkopo wa miaka 10 alafu ni nyumba ya 100 milioni utalipa 115 milioni, hapo ni mpaka riba.',
+    },
+    '3a3gmpte': {
+      'sw':
+          'Kwa riba ya mkopo wa nyumba wa miaka kuanzia 11 mpaka 25 inategemeana na taarifa mbalimbali hatakazo tupatia  mteja, hivyo wasiliana nasi au fika ofisini kwetu.',
+      'en':
+          'Kwa riba ya mkopo wa nyumba wa miaka kuanzia 11 mpaka 25 inategemeana na taarifa mbalimbali hatakazo tupatia  mteja, hivyo wasiliana nasi au fika ofisini kwetu.',
     },
   },
   // HouseLevel
@@ -2341,6 +2358,113 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i4ydwn9d': {
       'sw': 'Request Time:',
       'en': 'Request Time:',
+    },
+  },
+  // FileRequest
+  {
+    '85un8rtk': {
+      'sw': 'Majina yako kamili (jina la kwanza na la mwisho).',
+      'en': 'Full Name (First and Last name).',
+    },
+    'fuy6bpxa': {
+      'sw': 'andika jina',
+      'en': 'write name',
+    },
+    '0qek5ryv': {
+      'sw': '',
+      'en': '',
+    },
+    '68pcuypi': {
+      'sw': 'Kuhusu Kiwanja',
+      'en': 'Employment Status (Activity)',
+    },
+    '712wviiq': {
+      'sw': 'Employee',
+      'en': 'Mfanyakazi',
+    },
+    'gy6j1y0c': {
+      'sw': 'Mfanyabiashara',
+      'en': 'Entrepreneur ',
+    },
+    '11ebhy35': {
+      'sw': 'Mfanyakazi na Mfanyabiashara',
+      'en': 'Employee and Entrepreneur ',
+    },
+    'iovnckvo': {
+      'sw': 'chagua...',
+      'en': 'Please select ...',
+    },
+    'pghz3upy': {
+      'sw': 'Una Kiwanja',
+      'en': 'Do you own land',
+    },
+    '8vm7ela8': {
+      'sw': 'Una kiwanja chenye hati.',
+      'en': 'You own land with title deed.',
+    },
+    '98vqytxg': {
+      'sw': 'Huna kiwanja',
+      'en': 'You do not have land.',
+    },
+    '60d44eax': {
+      'sw': 'Una kiwanja kisicho na hati miliki.',
+      'en': 'You own land with no title deed.',
+    },
+    'lldhewaq': {
+      'sw': 'Chagua...',
+      'en': 'Please select ...',
+    },
+    'qkivm8pr': {
+      'sw': 'Mkopo wa miaka mingapi?',
+      'en': 'Loan of how long?',
+    },
+    'o9p1iu9l': {
+      'sw': 'Miaka 5 au chini',
+      'en': '5 years or below',
+    },
+    'n1blm65y': {
+      'sw': 'Kati ya: miaka 6 mpaka 10',
+      'en': 'Range: From 6 years to 10',
+    },
+    '0afiqs9s': {
+      'sw': 'Kati ya: miaka 11 mpaka 15',
+      'en': 'Range: From 11 years to 15',
+    },
+    '77jowa98': {
+      'sw': 'Kati ya: miaka 16 mpaka 25',
+      'en': 'Range: From 16 years to 25',
+    },
+    '7jdc9tjn': {
+      'sw': 'Chagua...',
+      'en': 'Please select ...',
+    },
+    '38387ydd': {
+      'sw': 'Kipato cha Mwezi',
+      'en': 'Monthly Income',
+    },
+    'xtrzkf80': {
+      'sw': 'Chini ya 1,000,000/=',
+      'en': 'Below 1,000,000/=',
+    },
+    'g36tjsau': {
+      'sw': 'Kati ya: 1,000,000/= mpaka 2,000,000/=',
+      'en': 'Range: From 1,000,000/= to 2,000,000/=',
+    },
+    'rbnacgc1': {
+      'sw': 'Kati ya:  2,000,000/= mpaka 3,000,000/=',
+      'en': 'Range: From 2,000,000/=  to 3,500,000/=',
+    },
+    'go9gg9hb': {
+      'sw': 'Juu ya 3,000,000/= ',
+      'en': 'Above 3,000,000/=',
+    },
+    'bqdh3tmy': {
+      'sw': 'chagua...',
+      'en': 'Please select ...',
+    },
+    '0wpnp2bd': {
+      'sw': 'Lipia Faili',
+      'en': 'Pay for File',
     },
   },
   // Miscellaneous

@@ -32,4 +32,3 @@ export 'admin_page/admin_page_widget.dart' show AdminPageWidget;
 export 'admin_page1/admin_page1_widget.dart' show AdminPage1Widget;
 export 'card_page/card_page_widget.dart' show CardPageWidget;
 export 'my_card_page/my_card_page_widget.dart' show MyCardPageWidget;
-export 'signature_page/signature_page_widget.dart' show SignaturePageWidget;

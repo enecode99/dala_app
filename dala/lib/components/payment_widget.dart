@@ -269,14 +269,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                         await TransactionsRecord.collection
                             .doc()
                             .set(transactionsCreateData);
-                        logFirebaseEvent('Button_Backend-Call');
-
-                        final housePlansUpdateData = createHousePlansRecordData(
-                          paidGoal: functions.sumPaid(
-                              textController2.text, widget.planTrans.paidGoal),
-                        );
-                        await widget.planTrans.reference
-                            .update(housePlansUpdateData);
                         logFirebaseEvent('Button_Bottom-Sheet');
                         await showModalBottomSheet(
                           isScrollControlled: true,
@@ -291,6 +283,14 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             );
                           },
                         );
+                        logFirebaseEvent('Button_Backend-Call');
+
+                        final housePlansUpdateData = createHousePlansRecordData(
+                          paidGoal: functions.sumPaid(
+                              textController2.text, widget.planTrans.paidGoal),
+                        );
+                        await widget.planTrans.reference
+                            .update(housePlansUpdateData);
                         logFirebaseEvent('Button_Navigate-Back');
                         Navigator.pop(context);
                       } else {
@@ -310,15 +310,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                           await TransactionsRecord.collection
                               .doc()
                               .set(transactionsCreateData);
-                          logFirebaseEvent('Button_Backend-Call');
-
-                          final housePlansUpdateData =
-                              createHousePlansRecordData(
-                            paidGoal: functions.sumPaid(textController2.text,
-                                widget.planTrans.paidGoal),
-                          );
-                          await widget.planTrans.reference
-                              .update(housePlansUpdateData);
                           logFirebaseEvent('Button_Bottom-Sheet');
                           await showModalBottomSheet(
                             isScrollControlled: true,
@@ -335,6 +326,15 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                           );
                           logFirebaseEvent('Button_Navigate-Back');
                           Navigator.pop(context);
+                          logFirebaseEvent('Button_Backend-Call');
+
+                          final housePlansUpdateData =
+                              createHousePlansRecordData(
+                            paidGoal: functions.sumPaid(textController2.text,
+                                widget.planTrans.paidGoal),
+                          );
+                          await widget.planTrans.reference
+                              .update(housePlansUpdateData);
                         } else {
                           if ((radioButtonValue) == 'Airtel Money') {
                             logFirebaseEvent('Button_Backend-Call');
@@ -352,15 +352,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             await TransactionsRecord.collection
                                 .doc()
                                 .set(transactionsCreateData);
-                            logFirebaseEvent('Button_Backend-Call');
-
-                            final housePlansUpdateData =
-                                createHousePlansRecordData(
-                              paidGoal: functions.sumPaid(textController2.text,
-                                  widget.planTrans.paidGoal),
-                            );
-                            await widget.planTrans.reference
-                                .update(housePlansUpdateData);
                             logFirebaseEvent('Button_Bottom-Sheet');
                             await showModalBottomSheet(
                               isScrollControlled: true,
@@ -377,6 +368,15 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             );
                             logFirebaseEvent('Button_Navigate-Back');
                             Navigator.pop(context);
+                            logFirebaseEvent('Button_Backend-Call');
+
+                            final housePlansUpdateData =
+                                createHousePlansRecordData(
+                              paidGoal: functions.sumPaid(textController2.text,
+                                  widget.planTrans.paidGoal),
+                            );
+                            await widget.planTrans.reference
+                                .update(housePlansUpdateData);
                           } else {
                             if ((radioButtonValue) == 'CRDB Bank') {
                               logFirebaseEvent('Button_Backend-Call');
@@ -394,16 +394,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                               await TransactionsRecord.collection
                                   .doc()
                                   .set(transactionsCreateData);
-                              logFirebaseEvent('Button_Backend-Call');
-
-                              final housePlansUpdateData =
-                                  createHousePlansRecordData(
-                                paidGoal: functions.sumPaid(
-                                    textController2.text,
-                                    widget.planTrans.paidGoal),
-                              );
-                              await widget.planTrans.reference
-                                  .update(housePlansUpdateData);
                               logFirebaseEvent('Button_Bottom-Sheet');
                               await showModalBottomSheet(
                                 isScrollControlled: true,
@@ -420,6 +410,16 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                               );
                               logFirebaseEvent('Button_Navigate-Back');
                               Navigator.pop(context);
+                              logFirebaseEvent('Button_Backend-Call');
+
+                              final housePlansUpdateData =
+                                  createHousePlansRecordData(
+                                paidGoal: functions.sumPaid(
+                                    textController2.text,
+                                    widget.planTrans.paidGoal),
+                              );
+                              await widget.planTrans.reference
+                                  .update(housePlansUpdateData);
                             } else {
                               if ((radioButtonValue) == 'NMB Bank') {
                                 logFirebaseEvent('Button_Backend-Call');
@@ -437,16 +437,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                 await TransactionsRecord.collection
                                     .doc()
                                     .set(transactionsCreateData);
-                                logFirebaseEvent('Button_Backend-Call');
-
-                                final housePlansUpdateData =
-                                    createHousePlansRecordData(
-                                  paidGoal: functions.sumPaid(
-                                      textController2.text,
-                                      widget.planTrans.paidGoal),
-                                );
-                                await widget.planTrans.reference
-                                    .update(housePlansUpdateData);
                                 logFirebaseEvent('Button_Bottom-Sheet');
                                 await showModalBottomSheet(
                                   isScrollControlled: true,
@@ -464,6 +454,16 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                 );
                                 logFirebaseEvent('Button_Navigate-Back');
                                 Navigator.pop(context);
+                                logFirebaseEvent('Button_Backend-Call');
+
+                                final housePlansUpdateData =
+                                    createHousePlansRecordData(
+                                  paidGoal: functions.sumPaid(
+                                      textController2.text,
+                                      widget.planTrans.paidGoal),
+                                );
+                                await widget.planTrans.reference
+                                    .update(housePlansUpdateData);
                               } else {
                                 if ((radioButtonValue) == 'Other Banks') {
                                   logFirebaseEvent('Button_Backend-Call');
@@ -481,16 +481,6 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                   await TransactionsRecord.collection
                                       .doc()
                                       .set(transactionsCreateData);
-                                  logFirebaseEvent('Button_Backend-Call');
-
-                                  final housePlansUpdateData =
-                                      createHousePlansRecordData(
-                                    paidGoal: functions.sumPaid(
-                                        textController2.text,
-                                        widget.planTrans.paidGoal),
-                                  );
-                                  await widget.planTrans.reference
-                                      .update(housePlansUpdateData);
                                   logFirebaseEvent('Button_Bottom-Sheet');
                                   await showModalBottomSheet(
                                     isScrollControlled: true,
@@ -508,6 +498,16 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                   );
                                   logFirebaseEvent('Button_Navigate-Back');
                                   Navigator.pop(context);
+                                  logFirebaseEvent('Button_Backend-Call');
+
+                                  final housePlansUpdateData =
+                                      createHousePlansRecordData(
+                                    paidGoal: functions.sumPaid(
+                                        textController2.text,
+                                        widget.planTrans.paidGoal),
+                                  );
+                                  await widget.planTrans.reference
+                                      .update(housePlansUpdateData);
                                 } else {
                                   logFirebaseEvent('Button_Alert-Dialog');
                                   await showDialog(

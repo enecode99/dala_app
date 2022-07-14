@@ -1,5 +1,6 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
+import '../card_page/card_page_widget.dart';
 import '../change_language_page/change_language_page_widget.dart';
 import '../components/interest_req_widget.dart';
 import '../components/mortgage_req_widget.dart';
@@ -14,7 +15,6 @@ import '../plan_house_page/plan_house_page_widget.dart';
 import '../policy/policy_widget.dart';
 import '../renovation_service_page/renovation_service_page_widget.dart';
 import '../sign_in_page/sign_in_page_widget.dart';
-import '../signature_page/signature_page_widget.dart';
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -324,7 +324,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          '0ftv93yh' /* Kadi Yangu */,
+                          '0ftv93yh' /* Faili langu */,
                         ),
                         style: FlutterFlowTheme.of(context).title3.override(
                               fontFamily: 'Open Sans',
@@ -349,7 +349,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                       type: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
                       reverseDuration: Duration(milliseconds: 0),
-                      child: SignaturePageWidget(),
+                      child: CardPageWidget(),
                     ),
                   );
                 },
@@ -366,7 +366,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'ilft10dg' /* Taarifa za Kadi */,
+                          'ilft10dg' /* Taarifa za Faili */,
                         ),
                         style: FlutterFlowTheme.of(context).title3.override(
                               fontFamily: 'Open Sans',
@@ -671,7 +671,7 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               width: 110,
@@ -745,112 +745,29 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                                 ),
                               ),
                             ),
-                            InkWell(
-                              onTap: () async {
-                                logFirebaseEvent(
-                                    'MY_ACCOUNT_activityButton_ON_TAP');
-                                logFirebaseEvent('activityButton_Bottom-Sheet');
-                                await showModalBottomSheet(
-                                  isScrollControlled: true,
-                                  backgroundColor: Colors.transparent,
-                                  context: context,
-                                  builder: (context) {
-                                    return Padding(
-                                      padding:
-                                          MediaQuery.of(context).viewInsets,
-                                      child: MortgageReqWidget(),
-                                    );
-                                  },
-                                );
-                              },
-                              child: Container(
-                                width: 110,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 5,
-                                      color: Color(0x3A000000),
-                                      offset: Offset(0, 2),
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Card(
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: Color(0xFFF5F5F5),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        4, 4, 4, 4),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.house_outlined,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          size: 40,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 8, 0, 0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'exbqi9hq' /* Anza Ujenzi */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Open Sans',
-                                                  fontSize: 13,
-                                                ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            StreamBuilder<List<HousePlansRecord>>(
-                              stream: queryHousePlansRecord(
-                                queryBuilder: (housePlansRecord) =>
-                                    housePlansRecord.where('user_plan',
-                                        isEqualTo: currentUserReference),
-                                singleRecord: true,
-                              ),
-                              builder: (context, snapshot) {
-                                // Customize what your widget looks like when it's loading.
-                                if (!snapshot.hasData) {
-                                  return Center(
-                                    child: SizedBox(
-                                      width: 50,
-                                      height: 50,
-                                      child: SpinKitCircle(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        size: 50,
-                                      ),
-                                    ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                              child: InkWell(
+                                onTap: () async {
+                                  logFirebaseEvent(
+                                      'MY_ACCOUNT_activityButton_ON_TAP');
+                                  logFirebaseEvent(
+                                      'activityButton_Bottom-Sheet');
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    context: context,
+                                    builder: (context) {
+                                      return Padding(
+                                        padding:
+                                            MediaQuery.of(context).viewInsets,
+                                        child: MortgageReqWidget(),
+                                      );
+                                    },
                                   );
-                                }
-                                List<HousePlansRecord>
-                                    bankButtonHousePlansRecordList =
-                                    snapshot.data;
-                                // Return an empty Container when the document does not exist.
-                                if (snapshot.data.isEmpty) {
-                                  return Container();
-                                }
-                                final bankButtonHousePlansRecord =
-                                    bankButtonHousePlansRecordList.isNotEmpty
-                                        ? bankButtonHousePlansRecordList.first
-                                        : null;
-                                return Container(
+                                },
+                                child: Container(
                                   width: 110,
                                   height: 100,
                                   decoration: BoxDecoration(
@@ -859,97 +776,195 @@ class _MyAccountPageWidgetState extends State<MyAccountPageWidget> {
                                     boxShadow: [
                                       BoxShadow(
                                         blurRadius: 5,
-                                        color: Color(0x39000000),
+                                        color: Color(0x3A000000),
                                         offset: Offset(0, 2),
                                       )
                                     ],
                                     borderRadius: BorderRadius.circular(8),
                                   ),
-                                  child: StreamBuilder<HouseRecord>(
-                                    stream: HouseRecord.getDocument(
-                                        bankButtonHousePlansRecord.planHouse),
-                                    builder: (context, snapshot) {
-                                      // Customize what your widget looks like when it's loading.
-                                      if (!snapshot.hasData) {
-                                        return Center(
-                                          child: SizedBox(
-                                            width: 50,
-                                            height: 50,
-                                            child: SpinKitCircle(
-                                              color:
+                                  child: Card(
+                                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                                    color: Color(0xFFF5F5F5),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          4, 4, 4, 4),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.house_outlined,
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryColor,
+                                            size: 40,
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 8, 0, 0),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'exbqi9hq' /* Anza Ujenzi */,
+                                              ),
+                                              style:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryColor,
-                                              size: 50,
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Open Sans',
+                                                        fontSize: 13,
+                                                      ),
                                             ),
                                           ),
-                                        );
-                                      }
-                                      final cardHouseRecord = snapshot.data;
-                                      return InkWell(
-                                        onTap: () async {
-                                          logFirebaseEvent(
-                                              'MY_ACCOUNT_Card_v8g3txz2_ON_TAP');
-                                          logFirebaseEvent('Card_Navigate-To');
-                                          await Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  PlanHousePageWidget(
-                                                house: cardHouseRecord,
-                                                planTrack:
-                                                    bankButtonHousePlansRecord,
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                              child: StreamBuilder<List<HousePlansRecord>>(
+                                stream: queryHousePlansRecord(
+                                  queryBuilder: (housePlansRecord) =>
+                                      housePlansRecord.where('user_plan',
+                                          isEqualTo: currentUserReference),
+                                  singleRecord: true,
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50,
+                                        height: 50,
+                                        child: SpinKitCircle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                          size: 50,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  List<HousePlansRecord>
+                                      bankButtonHousePlansRecordList =
+                                      snapshot.data;
+                                  // Return an empty Container when the document does not exist.
+                                  if (snapshot.data.isEmpty) {
+                                    return Container();
+                                  }
+                                  final bankButtonHousePlansRecord =
+                                      bankButtonHousePlansRecordList.isNotEmpty
+                                          ? bankButtonHousePlansRecordList.first
+                                          : null;
+                                  return Container(
+                                    width: 110,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 5,
+                                          color: Color(0x39000000),
+                                          offset: Offset(0, 2),
+                                        )
+                                      ],
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: StreamBuilder<HouseRecord>(
+                                      stream: HouseRecord.getDocument(
+                                          bankButtonHousePlansRecord.planHouse),
+                                      builder: (context, snapshot) {
+                                        // Customize what your widget looks like when it's loading.
+                                        if (!snapshot.hasData) {
+                                          return Center(
+                                            child: SizedBox(
+                                              width: 50,
+                                              height: 50,
+                                              child: SpinKitCircle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryColor,
+                                                size: 50,
                                               ),
                                             ),
                                           );
-                                        },
-                                        child: Card(
-                                          clipBehavior:
-                                              Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFFF5F5F5),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    4, 4, 4, 4),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Icon(
-                                                  Icons
-                                                      .account_balance_outlined,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryColor,
-                                                  size: 40,
+                                        }
+                                        final cardHouseRecord = snapshot.data;
+                                        return InkWell(
+                                          onTap: () async {
+                                            logFirebaseEvent(
+                                                'MY_ACCOUNT_Card_v8g3txz2_ON_TAP');
+                                            logFirebaseEvent(
+                                                'Card_Navigate-To');
+                                            await Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    PlanHousePageWidget(
+                                                  house: cardHouseRecord,
+                                                  planTrack:
+                                                      bankButtonHousePlansRecord,
                                                 ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 8, 0, 0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'b7x1v9n2' /* Nyumba */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
+                                              ),
+                                            );
+                                          },
+                                          child: Card(
+                                            clipBehavior:
+                                                Clip.antiAliasWithSaveLayer,
+                                            color: Color(0xFFF5F5F5),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(4, 4, 4, 4),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    Icons
+                                                        .account_balance_outlined,
+                                                    color: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'Open Sans',
-                                                          fontSize: 13,
-                                                        ),
+                                                        .primaryColor,
+                                                    size: 40,
                                                   ),
-                                                ),
-                                              ],
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 8, 0, 0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'b7x1v9n2' /* Nyumba */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Open Sans',
+                                                                fontSize: 13,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                );
-                              },
+                                        );
+                                      },
+                                    ),
+                                  );
+                                },
+                              ),
                             ),
                           ],
                         ),

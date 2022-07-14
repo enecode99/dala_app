@@ -13,6 +13,7 @@ import 'schema/transactions_record.dart';
 import 'schema/mortgage_request_record.dart';
 import 'schema/home_request_record.dart';
 import 'schema/premium_card_record.dart';
+import 'schema/user_files_record.dart';
 import 'schema/serializers.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -29,6 +30,7 @@ export 'schema/transactions_record.dart';
 export 'schema/mortgage_request_record.dart';
 export 'schema/home_request_record.dart';
 export 'schema/premium_card_record.dart';
+export 'schema/user_files_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
@@ -403,6 +405,48 @@ Future<FFFirestorePage<PremiumCardRecord>> queryPremiumCardRecordPage({
     queryCollectionPage(
       PremiumCardRecord.collection,
       PremiumCardRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query UserFilesRecords (as a Stream and as a Future).
+Stream<List<UserFilesRecord>> queryUserFilesRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      UserFilesRecord.collection,
+      UserFilesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<UserFilesRecord>> queryUserFilesRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      UserFilesRecord.collection,
+      UserFilesRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<UserFilesRecord>> queryUserFilesRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      UserFilesRecord.collection,
+      UserFilesRecord.serializer,
       queryBuilder: queryBuilder,
       nextPageMarker: nextPageMarker,
       pageSize: pageSize,
