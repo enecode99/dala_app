@@ -1,6 +1,5 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../components/card_info_widget.dart';
 import '../components/plan_info_widget.dart';
 import '../components/request_info_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
@@ -839,10 +838,10 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                         );
                       },
                     ),
-                    StreamBuilder<List<PremiumCardRecord>>(
-                      stream: queryPremiumCardRecord(
-                        queryBuilder: (premiumCardRecord) => premiumCardRecord
-                            .orderBy('card_time', descending: true),
+                    StreamBuilder<List<UserFilesRecord>>(
+                      stream: queryUserFilesRecord(
+                        queryBuilder: (userFilesRecord) => userFilesRecord
+                            .orderBy('current_time', descending: true),
                       ),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
@@ -859,15 +858,15 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                             ),
                           );
                         }
-                        List<PremiumCardRecord> listViewPremiumCardRecordList =
+                        List<UserFilesRecord> listViewUserFilesRecordList =
                             snapshot.data;
                         return ListView.builder(
                           padding: EdgeInsets.zero,
                           scrollDirection: Axis.vertical,
-                          itemCount: listViewPremiumCardRecordList.length,
+                          itemCount: listViewUserFilesRecordList.length,
                           itemBuilder: (context, listViewIndex) {
-                            final listViewPremiumCardRecord =
-                                listViewPremiumCardRecordList[listViewIndex];
+                            final listViewUserFilesRecord =
+                                listViewUserFilesRecordList[listViewIndex];
                             return Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -927,42 +926,43 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4, 0, 0, 0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 10, 12, 0),
-                                                  child: StreamBuilder<
-                                                      UsersRecord>(
-                                                    stream: UsersRecord.getDocument(
-                                                        listViewPremiumCardRecord
-                                                            .cardUser),
-                                                    builder:
-                                                        (context, snapshot) {
-                                                      // Customize what your widget looks like when it's loading.
-                                                      if (!snapshot.hasData) {
-                                                        return Center(
-                                                          child: SizedBox(
-                                                            width: 50,
-                                                            height: 50,
-                                                            child:
-                                                                SpinKitCircle(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primaryColor,
-                                                              size: 50,
-                                                            ),
-                                                          ),
-                                                        );
-                                                      }
-                                                      final remainPaymentTitleUsersRecord =
-                                                          snapshot.data;
-                                                      return Row(
+                                            child: StreamBuilder<UsersRecord>(
+                                              stream: UsersRecord.getDocument(
+                                                  listViewUserFilesRecord.user),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50,
+                                                      height: 50,
+                                                      child: SpinKitCircle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryColor,
+                                                        size: 50,
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+                                                final contentUsersRecord =
+                                                    snapshot.data;
+                                                return Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceEvenly,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 12, 0),
+                                                      child: Row(
                                                         mainAxisSize:
                                                             MainAxisSize.min,
                                                         mainAxisAlignment:
@@ -1008,7 +1008,7 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                                                                         0,
                                                                         0),
                                                             child: Text(
-                                                              remainPaymentTitleUsersRecord
+                                                              contentUsersRecord
                                                                   .email,
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1030,74 +1030,36 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
-                                                                        5,
                                                                         0,
+                                                                        4,
                                                                         0,
                                                                         0),
-                                                            child: InkWell(
-                                                              onTap: () async {
-                                                                logFirebaseEvent(
-                                                                    'ADMIN_PAGE1_PAGE_Icon_i2yc2jkr_ON_TAP');
-                                                                logFirebaseEvent(
-                                                                    'Icon_Bottom-Sheet');
-                                                                await showModalBottomSheet(
-                                                                  isScrollControlled:
-                                                                      true,
-                                                                  backgroundColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  context:
-                                                                      context,
-                                                                  builder:
-                                                                      (context) {
-                                                                    return Padding(
-                                                                      padding: MediaQuery.of(
-                                                                              context)
-                                                                          .viewInsets,
-                                                                      child:
-                                                                          CardInfoWidget(),
-                                                                    );
-                                                                  },
-                                                                );
-                                                              },
-                                                              child: Icon(
-                                                                Icons
-                                                                    .expand_more_sharp,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryColor,
-                                                                size: 30,
-                                                              ),
+                                                            child: Text(
+                                                              listViewUserFilesRecord
+                                                                  .currentTime
+                                                                  .toString(),
+                                                              textAlign:
+                                                                  TextAlign.end,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyText2
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Lexend Deca',
+                                                                    color: Color(
+                                                                        0xFF8B97A2),
+                                                                    fontSize:
+                                                                        14,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .normal,
+                                                                  ),
                                                             ),
                                                           ),
                                                         ],
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                                StreamBuilder<UsersRecord>(
-                                                  stream: UsersRecord.getDocument(
-                                                      listViewPremiumCardRecord
-                                                          .cardUser),
-                                                  builder: (context, snapshot) {
-                                                    // Customize what your widget looks like when it's loading.
-                                                    if (!snapshot.hasData) {
-                                                      return Center(
-                                                        child: SizedBox(
-                                                          width: 50,
-                                                          height: 50,
-                                                          child: SpinKitCircle(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryColor,
-                                                            size: 50,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    }
-                                                    final rowUsersRecord =
-                                                        snapshot.data;
-                                                    return Row(
+                                                      ),
+                                                    ),
+                                                    Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
@@ -1124,7 +1086,7 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                                                                   .fromSTEB(5,
                                                                       0, 0, 0),
                                                           child: Text(
-                                                            rowUsersRecord
+                                                            contentUsersRecord
                                                                 .phoneNumber,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1139,33 +1101,39 @@ class _AdminPage1WidgetState extends State<AdminPage1Widget> {
                                                           ),
                                                         ),
                                                       ],
-                                                    );
-                                                  },
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 4, 0, 0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'adhchjpq' /* Jun 1, 2021 */,
                                                     ),
-                                                    textAlign: TextAlign.end,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText2
-                                                        .override(
-                                                          fontFamily:
-                                                              'Lexend Deca',
-                                                          color:
-                                                              Color(0xFF8B97A2),
-                                                          fontSize: 14,
-                                                          fontWeight:
-                                                              FontWeight.normal,
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 4, 0, 0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'adhchjpq' /* Jun 1, 2021 */,
                                                         ),
-                                                  ),
-                                                ),
-                                              ],
+                                                        textAlign:
+                                                            TextAlign.end,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyText2
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Lexend Deca',
+                                                                  color: Color(
+                                                                      0xFF8B97A2),
+                                                                  fontSize: 14,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
                                             ),
                                           ),
                                         ),
