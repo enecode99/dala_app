@@ -45,7 +45,7 @@ class _MyCardPageWidgetState extends State<MyCardPageWidget> {
         ),
         title: Text(
           FFLocalizations.of(context).getText(
-            '8n3nnne5' /* Kadi Yangu */,
+            '8n3nnne5' /* Faili Langu */,
           ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Open Sans',

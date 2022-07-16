@@ -1445,8 +1445,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'FUNGUA FAILI',
     },
     'd9qq8088': {
-      'sw': 'Kadi ya Jipange ',
-      'en': 'Jipange Card',
+      'sw': 'Fungua File',
+      'en': 'Open FIle',
     },
     'xcj6i6ns': {
       'sw': 'Home',
@@ -1456,8 +1456,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // MyCardPage
   {
     '8n3nnne5': {
-      'sw': 'Kadi Yangu',
-      'en': 'My Card',
+      'sw': 'Faili Langu',
+      'en': 'My File',
     },
     'zxkjnhq0': {
       'sw': 'Home',

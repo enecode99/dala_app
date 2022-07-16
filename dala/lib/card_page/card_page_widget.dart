@@ -43,7 +43,7 @@ class _CardPageWidgetState extends State<CardPageWidget> {
         ),
         title: Text(
           FFLocalizations.of(context).getText(
-            'd9qq8088' /* Kadi ya Jipange  */,
+            'd9qq8088' /* Fungua File */,
           ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Open Sans',
