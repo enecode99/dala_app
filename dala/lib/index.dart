@@ -4,7 +4,6 @@ export 'sign_up_page/sign_up_page_widget.dart' show SignUpPageWidget;
 export 'change_pass_page/change_pass_page_widget.dart'
     show ChangePassPageWidget;
 export 'sign_in_page/sign_in_page_widget.dart' show SignInPageWidget;
-export 'start_page/start_page_widget.dart' show StartPageWidget;
 export 'home_page/home_page_widget.dart' show HomePageWidget;
 export 'my_home/my_home_widget.dart' show MyHomeWidget;
 export 'my_account_page/my_account_page_widget.dart' show MyAccountPageWidget;

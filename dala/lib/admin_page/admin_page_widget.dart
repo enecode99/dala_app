@@ -317,9 +317,8 @@ class _AdminPageWidgetState extends State<AdminPageWidget> {
                                                                 ),
                                                           ),
                                                         ),
-                                                      if (!(listViewUsersRecord
-                                                              .renovation) ??
-                                                          true)
+                                                      if (!listViewUsersRecord
+                                                          .renovation)
                                                         Padding(
                                                           padding:
                                                               EdgeInsetsDirectional

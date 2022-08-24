@@ -24,7 +24,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 import 'package:flutter/material.dart';
-import 'package:youtube_plyr_iframe/youtube_plyr_iframe.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 const kYoutubeAspectRatio = 16 / 9;
 

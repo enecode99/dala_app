@@ -100,7 +100,7 @@ class _DalaTigoPesaWidgetState extends State<DalaTigoPesaWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'm8ojtoos' /* 351999 */,
+                          'm8ojtoos' /* 5351999 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lexend Deca',

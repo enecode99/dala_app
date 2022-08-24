@@ -4,9 +4,9 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../main.dart';
 import '../policy/policy_widget.dart';
 import '../sign_in_page/sign_in_page_widget.dart';
-import '../start_page/start_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -490,7 +490,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      if ((checkboxListTileValue) == true)
+                      if (checkboxListTileValue == true)
                         FFButtonWidget(
                           onPressed: () async {
                             logFirebaseEvent(
@@ -533,7 +533,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                                 type: PageTransitionType.fade,
                                 duration: Duration(milliseconds: 0),
                                 reverseDuration: Duration(milliseconds: 0),
-                                child: StartPageWidget(),
+                                child: NavBarPage(initialPage: 'HomePage'),
                               ),
                             );
                           },
@@ -560,7 +560,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                      if ((checkboxListTileValue) == false)
+                      if (checkboxListTileValue == false)
                         FFButtonWidget(
                           onPressed: () async {
                             logFirebaseEvent(

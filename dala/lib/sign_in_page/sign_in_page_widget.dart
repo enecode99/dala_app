@@ -4,8 +4,8 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../main.dart';
 import '../sign_up_page/sign_up_page_widget.dart';
-import '../start_page/start_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -262,7 +262,7 @@ class _SignInPageWidgetState extends State<SignInPageWidget> {
                               type: PageTransitionType.fade,
                               duration: Duration(milliseconds: 0),
                               reverseDuration: Duration(milliseconds: 0),
-                              child: StartPageWidget(),
+                              child: NavBarPage(initialPage: 'HomePage'),
                             ),
                           );
                         },

@@ -249,7 +249,7 @@ class _HouseTypePage2WidgetState extends State<HouseTypePage2Widget> {
                                           child: Text(
                                             functions.formatPrice15(
                                                 wrapHouseRecord.housePrice
-                                                    .toDouble()),
+                                                    ?.toDouble()),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(

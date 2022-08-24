@@ -108,15 +108,11 @@ class _CardPageWidgetState extends State<CardPageWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Expanded(
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'b3vuv5j4' /* Fungua faili la huduma yetu Le... */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'b3vuv5j4' /* Fungua faili la huduma yetu Le... */,
                                 ),
+                                style: FlutterFlowTheme.of(context).bodyText2,
                               ),
                             ),
                           ],

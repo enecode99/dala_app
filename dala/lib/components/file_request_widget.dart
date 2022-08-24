@@ -19,6 +19,7 @@ class FileRequestWidget extends StatefulWidget {
 }
 
 class _FileRequestWidgetState extends State<FileRequestWidget> {
+  String downPaymentValue;
   String employmentValue;
   TextEditingController textController;
   String titledeedValue;
@@ -37,7 +38,7 @@ class _FileRequestWidgetState extends State<FileRequestWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
       child: Container(
         width: double.infinity,
-        height: 530,
+        height: 620,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -368,6 +369,66 @@ class _FileRequestWidgetState extends State<FileRequestWidget> {
                 ),
               ),
               Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'cruy6lu4' /* Do you have 15% down-payment? */,
+                        ),
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).subtitle2.override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 14,
+                            ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
+                      child: FlutterFlowDropDown(
+                        options: [
+                          FFLocalizations.of(context).getText(
+                            'ltsu5yai' /* Chini ya 1,000,000/= */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'pqsjicxr' /* Kati ya: 1,000,000/= mpaka 2,0... */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'ohylo4td' /* Kati ya:  2,000,000/= mpaka 3,... */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'p602u6o1' /* Juu ya 3,000,000/=  */,
+                          )
+                        ],
+                        onChanged: (val) =>
+                            setState(() => downPaymentValue = val),
+                        width: 350,
+                        height: 50,
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Open Sans',
+                                  color: Colors.black,
+                                ),
+                        hintText: FFLocalizations.of(context).getText(
+                          'b1ifpd0g' /* chagua... */,
+                        ),
+                        fillColor: Colors.white,
+                        elevation: 2,
+                        borderColor: FlutterFlowTheme.of(context).secondaryText,
+                        borderWidth: 0,
+                        borderRadius: 1,
+                        margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                        hidesUnderline: true,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
@@ -383,6 +444,7 @@ class _FileRequestWidgetState extends State<FileRequestWidget> {
                       titleDeed: titledeedValue,
                       timeDuration: tdurationValue,
                       currentTime: getCurrentTimestamp,
+                      downPayment: downPaymentValue,
                     );
                     await UserFilesRecord.collection
                         .doc()

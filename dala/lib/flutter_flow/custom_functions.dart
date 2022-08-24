@@ -36,6 +36,27 @@ String formatPrice15(double price) {
   return ("$form/=");
 }
 
+int price15(int price) {
+  // return 15% of mortgageGoal
+  double x = .15 * price;
+  price = x.toInt();
+  return price;
+}
+
+int price15M(int price) {
+  // return 15% of mortgageGoal
+  double x = (1.35 * price) * .15;
+  price = x.toInt();
+  return price;
+}
+
+int price15H(int price) {
+  // return 15% of mortgageGoal
+  double x = (1.83 * price) * .15;
+  price = x.toInt();
+  return price;
+}
+
 String formatPrice15M(double price) {
   // return 15% of mortgageGoal
   String form;
@@ -164,4 +185,14 @@ int midPrice(int price) {
 int highPrice(int price) {
   // return price multiply by 1.83.
   return (price * 1.83).toInt();
+}
+
+int montlyPayment(
+  int price2,
+  String price1,
+) {
+  // price2 minus price1 divide by 120.
+  double form;
+  form = (price2 - int.parse(price1)) / 120;
+  return form.round();
 }

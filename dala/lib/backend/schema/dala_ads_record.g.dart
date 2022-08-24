@@ -87,7 +87,7 @@ class _$DalaAdsRecord extends DalaAdsRecord {
   final DocumentReference<Object> reference;
 
   factory _$DalaAdsRecord([void Function(DalaAdsRecordBuilder) updates]) =>
-      (new DalaAdsRecordBuilder()..update(updates)).build();
+      (new DalaAdsRecordBuilder()..update(updates))._build();
 
   _$DalaAdsRecord._({this.image, this.time, this.reference}) : super._();
 
@@ -115,7 +115,7 @@ class _$DalaAdsRecord extends DalaAdsRecord {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('DalaAdsRecord')
+    return (newBuiltValueToStringHelper(r'DalaAdsRecord')
           ..add('image', image)
           ..add('time', time)
           ..add('reference', reference))
@@ -167,7 +167,9 @@ class DalaAdsRecordBuilder
   }
 
   @override
-  _$DalaAdsRecord build() {
+  DalaAdsRecord build() => _build();
+
+  _$DalaAdsRecord _build() {
     final _$result = _$v ??
         new _$DalaAdsRecord._(image: image, time: time, reference: reference);
     replace(_$result);
@@ -175,4 +177,4 @@ class DalaAdsRecordBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

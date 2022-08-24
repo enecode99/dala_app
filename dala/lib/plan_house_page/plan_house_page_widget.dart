@@ -119,7 +119,7 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                           ),
                           child: Container(
                             width: double.infinity,
-                            height: 110,
+                            height: 180,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .primaryBackground,
@@ -163,19 +163,19 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'bi5j7eb1' /* Kiwango: Chini */,
+                                                'iddwhaw4' /* Kiwango: Chini */,
                                               ),
                                             ),
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'ed2soped' /* Kiwango: Kati */,
+                                                '1t6dh9v0' /* Kiwango: Kati */,
                                               ),
                                             ),
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '5r2hpurv' /* Kiwango: Juu */,
+                                                'ylg67d9e' /* Kiwango: Juu */,
                                               ),
                                             ),
                                           ],
@@ -202,6 +202,8 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Align(
                                                       alignment:
@@ -217,34 +219,41 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                               MainAxisSize.max,
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
-                                                                  .center,
+                                                                  .start,
                                                           children: [
                                                             Align(
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0.13,
                                                                       0.78),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'ebdiuqyo' /* GHARAMA: */,
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            100,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'fgjft3jc' /* GHARAMA: */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .subtitle1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Open Sans',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                      ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle1
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Open Sans',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          14,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                    ),
                                                               ),
                                                             ),
                                                             Align(
@@ -297,33 +306,42 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             MainAxisSize.max,
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
-                                                                .center,
+                                                                .start,
                                                         children: [
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
                                                                     0.13, 0.78),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'qau94hum' /* LIPA: */,
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          100,
+                                                                          0,
+                                                                          0,
+                                                                          0),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'og6vce60' /* LIPA: */,
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .subtitle1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Open Sans',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          14,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w600,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .subtitle1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Open Sans',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    fontSize:
-                                                                        14,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                  ),
                                                             ),
                                                           ),
                                                           Align(
@@ -342,7 +360,7 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                                 functions.formatPrice15(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -362,6 +380,150 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             ),
                                                           ),
                                                         ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          widget
+                                                                              .house
+                                                                              .housePrice,
+                                                                          functions
+                                                                              .price15(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'lc5cdqje' /* /mwezi */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '8n4q5rtx' /* kwa miaka 10. */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ],
@@ -401,34 +563,41 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                               MainAxisSize.max,
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
-                                                                  .center,
+                                                                  .start,
                                                           children: [
                                                             Align(
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0.13,
                                                                       0.78),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  '5kzmms54' /* GHARAMA: */,
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            100,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'wcebyktp' /* GHARAMA: */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .subtitle1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Open Sans',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                      ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle1
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Open Sans',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          14,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                    ),
                                                               ),
                                                             ),
                                                             Align(
@@ -481,33 +650,42 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             MainAxisSize.max,
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
-                                                                .center,
+                                                                .start,
                                                         children: [
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
                                                                     0.13, 0.78),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                's1cjtqoi' /* LIPA: */,
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          100,
+                                                                          0,
+                                                                          0,
+                                                                          0),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'qej87ogy' /* LIPA: */,
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .subtitle1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Open Sans',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          14,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w600,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .subtitle1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Open Sans',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    fontSize:
-                                                                        14,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                  ),
                                                             ),
                                                           ),
                                                           Align(
@@ -526,7 +704,7 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                                 functions.formatPrice15M(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -546,6 +724,150 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             ),
                                                           ),
                                                         ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          functions.midPrice(widget
+                                                                              .house
+                                                                              .housePrice),
+                                                                          functions
+                                                                              .price15M(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'k1gfa52j' /* /mwezi */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '27qzqhgy' /* kwa miaka 10. */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ],
@@ -585,34 +907,41 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                               MainAxisSize.max,
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
-                                                                  .center,
+                                                                  .start,
                                                           children: [
                                                             Align(
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0.13,
                                                                       0.78),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'te2dafh0' /* GHARAMA: */,
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            100,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'keuqcsvu' /* GHARAMA: */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .subtitle1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Open Sans',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                      ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle1
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Open Sans',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          14,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                    ),
                                                               ),
                                                             ),
                                                             Align(
@@ -665,33 +994,42 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             MainAxisSize.max,
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
-                                                                .center,
+                                                                .start,
                                                         children: [
                                                           Align(
                                                             alignment:
                                                                 AlignmentDirectional(
                                                                     0.13, 0.78),
-                                                            child: Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                '1vetl270' /* LIPA: */,
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          100,
+                                                                          0,
+                                                                          0,
+                                                                          0),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '04ve1h0a' /* LIPA: */,
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .subtitle1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Open Sans',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          14,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w600,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .subtitle1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Open Sans',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    fontSize:
-                                                                        14,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600,
-                                                                  ),
                                                             ),
                                                           ),
                                                           Align(
@@ -710,7 +1048,7 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                                 functions.formatPrice15H(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -730,6 +1068,150 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
                                                             ),
                                                           ),
                                                         ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          functions.highPrice(widget
+                                                                              .house
+                                                                              .housePrice),
+                                                                          functions
+                                                                              .price15H(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        '6n8hkras' /* /mwezi */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '9r4heb49' /* kwa miaka 10. */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ],
@@ -1013,113 +1495,109 @@ class _PlanHousePageWidgetState extends State<PlanHousePageWidget> {
             ),
             Align(
               alignment: AlignmentDirectional(0, 1.05),
-              child: Material(
-                color: Colors.transparent,
-                elevation: 10,
-                shape: RoundedRectangleBorder(
+              child: Container(
+                width: double.infinity,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).tertiaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 4,
+                      color: Color(0x33000000),
+                      offset: Offset(1, -1),
+                    )
+                  ],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0),
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),
-                ),
-                child: Container(
-                  width: double.infinity,
-                  height: 100,
-                  decoration: BoxDecoration(
+                  border: Border.all(
                     color: FlutterFlowTheme.of(context).tertiaryColor,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                    border: Border.all(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                    ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 5),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'rh3dhwnp' /* "Kila Mtu Kwake." */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 16,
-                                      fontStyle: FontStyle.italic,
-                                    ),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 5),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'rh3dhwnp' /* "Kila Mtu Kwake." */,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontSize: 14,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                             ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5, 0, 0, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      logFirebaseEvent(
-                                          'PLAN_HOUSE_BADILI_NYUMBA_BTN_ON_TAP');
-                                      logFirebaseEvent('Button_Navigate-To');
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              HousesPlanPageWidget(
-                                            trackHouse: widget.house,
-                                            trackPlan: widget.planTrack,
-                                          ),
+                          ),
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    logFirebaseEvent(
+                                        'PLAN_HOUSE_BADILI_NYUMBA_BTN_ON_TAP');
+                                    logFirebaseEvent('Button_Navigate-To');
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            HousesPlanPageWidget(
+                                          trackHouse: widget.house,
+                                          trackPlan: widget.planTrack,
                                         ),
-                                      );
-                                    },
-                                    text: FFLocalizations.of(context).getText(
-                                      'owr1d6b6' /* BADILI NYUMBA */,
-                                    ),
-                                    icon: Icon(
-                                      Icons.payment,
-                                      size: 15,
-                                    ),
-                                    options: FFButtonOptions(
-                                      width: 184,
-                                      height: 50,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                            fontFamily: 'Open Sans',
-                                            color: Colors.white,
-                                          ),
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1,
                                       ),
-                                      borderRadius: BorderRadius.circular(12),
+                                    );
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'owr1d6b6' /* BADILI NYUMBA */,
+                                  ),
+                                  icon: Icon(
+                                    Icons.payment,
+                                    size: 15,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 184,
+                                    height: 50,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Open Sans',
+                                          color: Colors.white,
+                                        ),
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
                                     ),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),

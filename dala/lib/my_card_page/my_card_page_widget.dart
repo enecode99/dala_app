@@ -98,10 +98,8 @@ class _MyCardPageWidgetState extends State<MyCardPageWidget> {
                   Expanded(
                     child: Builder(
                       builder: (context) {
-                        final cardImages = columnPremiumCardRecord.cardImages
-                                .toList()
-                                ?.toList() ??
-                            [];
+                        final cardImages =
+                            columnPremiumCardRecord.cardImages.toList();
                         return Container(
                           width: double.infinity,
                           height: 500,

@@ -402,7 +402,7 @@ class _HousesPlanPageWidgetState extends State<HousesPlanPageWidget> {
                                                     functions.formatPrice15(
                                                         wrapHouseRecord
                                                             .housePrice
-                                                            .toDouble()),
+                                                            ?.toDouble()),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyText2

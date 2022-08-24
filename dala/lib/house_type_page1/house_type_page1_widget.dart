@@ -105,7 +105,7 @@ class _HouseTypePage1WidgetState extends State<HouseTypePage1Widget> {
                           (wrapIndex) {
                         final wrapHouseRecord = wrapHouseRecordList[wrapIndex];
                         return Visibility(
-                          visible: !(wrapHouseRecord.houseRenovation) ?? true,
+                          visible: !wrapHouseRecord.houseRenovation,
                           child: InkWell(
                             onTap: () async {
                               logFirebaseEvent(
@@ -257,7 +257,7 @@ class _HouseTypePage1WidgetState extends State<HouseTypePage1Widget> {
                                             child: Text(
                                               functions.formatPrice15(
                                                   wrapHouseRecord.housePrice
-                                                      .toDouble()),
+                                                      ?.toDouble()),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyText2

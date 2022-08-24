@@ -277,7 +277,7 @@ class _$HouseRecord extends HouseRecord {
   final DocumentReference<Object> reference;
 
   factory _$HouseRecord([void Function(HouseRecordBuilder) updates]) =>
-      (new HouseRecordBuilder()..update(updates)).build();
+      (new HouseRecordBuilder()..update(updates))._build();
 
   _$HouseRecord._(
       {this.houseName,
@@ -370,7 +370,7 @@ class _$HouseRecord extends HouseRecord {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('HouseRecord')
+    return (newBuiltValueToStringHelper(r'HouseRecord')
           ..add('houseName', houseName)
           ..add('houseImages', houseImages)
           ..add('houseVideo', houseVideo)
@@ -512,7 +512,9 @@ class HouseRecordBuilder implements Builder<HouseRecord, HouseRecordBuilder> {
   }
 
   @override
-  _$HouseRecord build() {
+  HouseRecord build() => _build();
+
+  _$HouseRecord _build() {
     _$HouseRecord _$result;
     try {
       _$result = _$v ??
@@ -548,7 +550,7 @@ class HouseRecordBuilder implements Builder<HouseRecord, HouseRecordBuilder> {
         _housePlan?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            'HouseRecord', _$failedField, e.toString());
+            r'HouseRecord', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -557,4 +559,4 @@ class HouseRecordBuilder implements Builder<HouseRecord, HouseRecordBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

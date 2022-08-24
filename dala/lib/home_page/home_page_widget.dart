@@ -96,9 +96,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             ),
             actions: [
               Visibility(
-                visible:
-                    valueOrDefault(currentUserDocument?.ownerAdmin, false) ??
-                        true,
+                visible: valueOrDefault<bool>(
+                    currentUserDocument?.ownerAdmin, false),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                   child: AuthUserStreamWidget(
@@ -570,7 +569,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 20),
+                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 15),
                               child: StreamBuilder<List<HouseRecord>>(
                                 stream: queryHouseRecord(
                                   queryBuilder: (houseRecord) =>
@@ -607,13 +606,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         final row1HouseRecord =
                                             row1HouseRecordList[row1Index];
                                         return Visibility(
-                                          visible: (row1HouseRecord
-                                                  .houseRenovation) !=
-                                              true,
+                                          visible:
+                                              row1HouseRecord.houseRenovation !=
+                                                  true,
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    3, 0, 5, 0),
+                                                    3, 10, 5, 10),
                                             child: InkWell(
                                               onTap: () async {
                                                 logFirebaseEvent(
@@ -826,7 +825,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                 functions.formatPrice15(
                                                                     row1HouseRecord
                                                                         .housePrice
-                                                                        .toDouble()),
+                                                                        ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyText2
@@ -860,10 +859,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 },
                               ),
                             ),
-                            StreamBuilder<List<HouseRecord>>(
-                              stream: queryHouseRecord(
-                                queryBuilder: (houseRecord) => houseRecord
-                                    .where('house_renovation', isEqualTo: true),
+                            StreamBuilder<List<DalaAdsRecord>>(
+                              stream: queryDalaAdsRecord(
                                 singleRecord: true,
                               ),
                               builder: (context, snapshot) {
@@ -881,15 +878,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                   );
                                 }
-                                List<HouseRecord> stackHouseRecordList =
+                                List<DalaAdsRecord> stackDalaAdsRecordList =
                                     snapshot.data;
                                 // Return an empty Container when the document does not exist.
                                 if (snapshot.data.isEmpty) {
                                   return Container();
                                 }
-                                final stackHouseRecord =
-                                    stackHouseRecordList.isNotEmpty
-                                        ? stackHouseRecordList.first
+                                final stackDalaAdsRecord =
+                                    stackDalaAdsRecordList.isNotEmpty
+                                        ? stackDalaAdsRecordList.first
                                         : null;
                                 return Stack(
                                   children: [
@@ -1049,7 +1046,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 20),
+                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 15),
                               child: StreamBuilder<List<HouseRecord>>(
                                 stream: queryHouseRecord(
                                   queryBuilder: (houseRecord) => houseRecord
@@ -1090,7 +1087,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         return Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  3, 0, 5, 0),
+                                                  3, 10, 5, 10),
                                           child: InkWell(
                                             onTap: () async {
                                               logFirebaseEvent(
@@ -1298,7 +1295,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               functions.formatPrice15(
                                                                   row1HouseRecord
                                                                       .housePrice
-                                                                      .toDouble()),
+                                                                      ?.toDouble()),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyText2
@@ -1333,7 +1330,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -1400,7 +1397,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 0),
+                                  EdgeInsetsDirectional.fromSTEB(3, 10, 3, 15),
                               child: StreamBuilder<List<HouseRecord>>(
                                 stream: queryHouseRecord(
                                   queryBuilder: (houseRecord) =>
@@ -1439,7 +1436,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         return Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  3, 0, 5, 0),
+                                                  3, 10, 5, 10),
                                           child: InkWell(
                                             onTap: () async {
                                               logFirebaseEvent(
@@ -1647,7 +1644,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               functions.formatPrice15(
                                                                   row1HouseRecord
                                                                       .housePrice
-                                                                      .toDouble()),
+                                                                      ?.toDouble()),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyText2
@@ -1752,8 +1749,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         'nnrpk745' /* Agiza */,
                                       ),
                                       options: FFButtonOptions(
-                                        width: 130,
-                                        height: 40,
+                                        width: 110,
+                                        height: 35,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
                                         textStyle: FlutterFlowTheme.of(context)

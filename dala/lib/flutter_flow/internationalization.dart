@@ -11,13 +11,13 @@ class FFLocalizations {
 
   static List<String> languages() => ['sw', 'en'];
 
-  String get languageCode => locale.languageCode;
+  String get languageCode => locale.toString();
   int get languageIndex => languages().contains(languageCode)
       ? languages().indexOf(languageCode)
       : 0;
 
   String getText(String key) =>
-      (kTranslationsMap[key] ?? {})[locale.languageCode] ?? '';
+      (kTranslationsMap[key] ?? {})[locale.toString()] ?? '';
 
   String getVariableText({
     String swText = '',
@@ -31,7 +31,7 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 
   @override
   bool isSupported(Locale locale) =>
-      FFLocalizations.languages().contains(locale.languageCode);
+      FFLocalizations.languages().contains(locale.toString());
 
   @override
   Future<FFLocalizations> load(Locale locale) =>
@@ -40,6 +40,13 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
   @override
   bool shouldReload(FFLocalizationsDelegate old) => false;
 }
+
+Locale createLocale(String language) => language.contains('_')
+    ? Locale.fromSubtags(
+        languageCode: language.split('_').first,
+        scriptCode: language.split('_').last,
+      )
+    : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // LanguagePage
@@ -196,41 +203,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Register',
     },
     'l5ja2apy': {
-      'sw': 'Home',
-      'en': '',
-    },
-  },
-  // StartPage
-  {
-    'y3eqks23': {
-      'sw': 'Jenga Nyumba',
-      'en': 'Build a House',
-    },
-    'w0kgn48g': {
-      'sw':
-          'Ukilipa 12.5% ya gharama ya ujenzi wa nyumba, unajengewa kuanzia msingi mpaka finnishing alafu utalipa kiasi kilichobaki mpaka kwa miaka 20.',
-      'en':
-          'If you pay 12.5% of the cost of building of a house, it is built from foundation to finnishing and then you will pay the remaining amount for up to 20 years.',
-    },
-    '5cdkstic': {
-      'sw': 'Fungua',
-      'en': 'Open',
-    },
-    'l9qlefr1': {
-      'sw': 'Karabati Nyumba',
-      'en': 'House Renovation',
-    },
-    'mtmusb1r': {
-      'sw':
-          'Fanya ukarabati, ongeza vyumba, badili mwonekano wa nyumba, na malizia ujenzi.\nKwa ukarabati unao gharimu 20 mil mpaka 1 bil, ukilipa 1 mil, tunakufanyia ukarabati alafu gharama iliyobaki utalipa kwa miaka 20.',
-      'en':
-          'Renovate, add rooms, change house appearance, and finish construction. For repairs that cost 20 mil to 1 bil, we do renovation for you and then the remain cost you will pay for 20 years.',
-    },
-    'fc6shd4g': {
-      'sw': 'Fungua',
-      'en': 'Open',
-    },
-    'sufh60jx': {
       'sw': 'Home',
       'en': '',
     },
@@ -399,33 +371,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': '\"Dala, Kila Mtu Kwake.\"',
       'en': '\"Dala, Kila Mtu Kwake.\"',
     },
-    '1tcdj4g2': {
-      'sw': 'LIPA',
-      'en': 'PAY',
-    },
-    'xmhmdnf9': {
-      'sw': 'DALA ',
-      'en': 'DALA',
-    },
-    'stge8mmn': {
-      'sw': 'Lipa 15% ya gharama',
-      'en': 'Pay 15% of the  cost',
-    },
     'fbs18sbj': {
       'sw': 'Huduma ya Haraka',
       'en': 'Quick Service',
-    },
-    'q1b6mw0t': {
-      'sw': 'Riba ya Mkopo',
-      'en': 'Loan Interest',
     },
     'exbqi9hq': {
       'sw': 'Anza Ujenzi',
       'en': 'Start Building',
     },
+    '6cy9orp8': {
+      'sw': 'Ofa',
+      'en': 'Offer',
+    },
     'b7x1v9n2': {
-      'sw': 'Nyumba',
-      'en': 'House',
+      'sw': 'Nyumba Yangu',
+      'en': 'My House',
     },
     'm58o9o9i': {
       'sw': 'Histolia ya Miamala',
@@ -486,89 +446,65 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'Nyumba',
       'en': 'House',
     },
-    '9capem0p': {
+    'h63tln29': {
       'sw': 'Kiwango: Chini',
       'en': 'Sub-Standard',
     },
-    'blwzie6g': {
+    '3dpikfrh': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'wjrlaiuz': {
+    '898divf8': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    '06ib3yh8': {
-      'sw': 'OFA YAKO',
-      'en': 'OFA YAKO',
+    'ze71f3nu': {
+      'sw': '/mwezi',
+      'en': '/month',
     },
-    'ci0updc6': {
-      'sw': 'LIPA:',
-      'en': 'PAY:',
+    's4ay2r4w': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
-    '6gg58ur3': {
-      'sw': '0.000/=',
-      'en': '0.000/=',
-    },
-    'xw5gsk96': {
-      'sw': 'FUNGUA OFA YAKO',
-      'en': 'FUNGUA OFA YAKO',
-    },
-    '9274fmss': {
+    'ygurt8ns': {
       'sw': 'Kiwango: Kati',
       'en': 'Standard',
     },
-    'tw496qve': {
+    'extqlov4': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    '8r09udth': {
+    '9txfhfxd': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    'bvm0jvqo': {
-      'sw': 'OFA YAKO',
-      'en': 'OFA YAKO',
+    'iq3xrry0': {
+      'sw': '/mwezi',
+      'en': '/month',
     },
-    'fhkrech0': {
-      'sw': 'LIPA:',
-      'en': 'PAY:',
+    'h0s8if5z': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
-    'kooyzt53': {
-      'sw': '0.000/=',
-      'en': '0.000/=',
-    },
-    'ju0y0jga': {
-      'sw': 'FUNGUA OFA YAKO',
-      'en': 'FUNGUA OFA YAKO',
-    },
-    '1npucdxy': {
+    'vl4s339y': {
       'sw': 'Kiwango: Juu',
       'en': 'Premium',
     },
-    'b71a1cob': {
+    'tgpqdnes': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'ru94ae7j': {
+    'v75e7hkw': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    'hpgftlq3': {
-      'sw': 'OFA YAKO',
-      'en': 'OFA YAKO',
+    'r8szwsve': {
+      'sw': '/mwezi',
+      'en': '/month',
     },
-    'g6f7keu7': {
-      'sw': 'LIPA:',
-      'en': 'PAY:',
-    },
-    '8a0ea362': {
-      'sw': '0.000/=',
-      'en': '0.000/=',
-    },
-    'pjo89omq': {
-      'sw': 'FUNGUA OFA YAKO',
-      'en': 'FUNGUA OFA YAKO',
+    'su1ktwtz': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
     'skmk7lnh': {
       'sw': 'Huduma',
@@ -600,9 +536,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'Fungua',
       'en': 'Open',
     },
-    'nj3s6sh1': {
-      'sw': '\"Kila Mtu Kwake.\"',
-      'en': '\"Kila Mtu Kwake.\"',
+    'hkwaafye': {
+      'sw': '\"Kila mtu kwake\"',
+      'en': '\"Kila mtu kwake\"',
     },
     '6ag8ad9t': {
       'sw': 'CHAGUA NYUMBA',
@@ -623,41 +559,65 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'Nyumba',
       'en': 'House',
     },
-    'bi5j7eb1': {
+    'iddwhaw4': {
       'sw': 'Kiwango: Chini',
       'en': 'Sub-Standard',
     },
-    'ebdiuqyo': {
+    'fgjft3jc': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'qau94hum': {
+    'og6vce60': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    'ed2soped': {
+    'lc5cdqje': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '8n4q5rtx': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    '1t6dh9v0': {
       'sw': 'Kiwango: Kati',
       'en': 'Standard',
     },
-    '5kzmms54': {
+    'wcebyktp': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    's1cjtqoi': {
+    'qej87ogy': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    '5r2hpurv': {
+    'k1gfa52j': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '27qzqhgy': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    'ylg67d9e': {
       'sw': 'Kiwango: Juu',
       'en': 'Premium',
     },
-    'te2dafh0': {
+    'keuqcsvu': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    '1vetl270': {
+    '04ve1h0a': {
       'sw': 'LIPA:',
       'en': 'PAY:',
+    },
+    '6n8hkras': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '9r4heb49': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
     'z3tcst4f': {
       'sw': 'Huduma ',
@@ -708,41 +668,65 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'sw': 'Nyumba',
       'en': 'House',
     },
-    'l4h7fka4': {
+    'lxb2k11e': {
       'sw': 'Kiwango: Chini',
       'en': 'Sub-Standard',
     },
-    'jzs488zq': {
+    '3jp04fau': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'n332stvj': {
+    'fij07507': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    'f9rhsmrk': {
+    'zsgmtu41': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '17zsbj55': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    'bhvzsmbe': {
       'sw': 'Kiwango: Kati',
       'en': 'Standard',
     },
-    'pvjdq10z': {
+    'zmb2ekx3': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'a96ou12i': {
+    'x5oynxtu': {
       'sw': 'LIPA:',
       'en': 'PAY:',
     },
-    'g30igxqy': {
+    'fudja45i': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    'cjodancb': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    'tplzwid6': {
       'sw': 'Kiwango: Juu',
       'en': 'Premium',
     },
-    'c7lmwuek': {
+    'honsnyee': {
       'sw': 'GHARAMA:',
       'en': 'COST:',
     },
-    'nfodcsui': {
+    'ude05lu4': {
       'sw': 'LIPA:',
       'en': 'PAY:',
+    },
+    'jjjt3i4n': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    'sfnoppx6': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
     '19udppse': {
       'sw': 'Huduma ',
@@ -879,6 +863,66 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v7my9aa5': {
       'sw': 'Lipa kidogo kidogo kwa mpaka miezi 12',
       'en': 'Pay in installments for up to 12months',
+    },
+    'fa58nk7j': {
+      'sw': 'Kiwango: Chini',
+      'en': 'Sub-Standard',
+    },
+    'g9ktutvq': {
+      'sw': 'GHARAMA:',
+      'en': 'COST:',
+    },
+    '8z95xpww': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    'f1lcyrr3': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '9v0cqwz0': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    'do8vh3rx': {
+      'sw': 'Kiwango: Kati',
+      'en': 'Standard',
+    },
+    '7ola9psv': {
+      'sw': 'GHARAMA:',
+      'en': 'COST:',
+    },
+    '7zbq7uct': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    'dkqhdpxu': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '69fkihyg': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
+    },
+    'f492we0v': {
+      'sw': 'Kiwango: Juu',
+      'en': 'Premium',
+    },
+    'jlba2jsg': {
+      'sw': 'GHARAMA:',
+      'en': 'COST:',
+    },
+    'alk6xyoe': {
+      'sw': 'LIPA:',
+      'en': 'PAY:',
+    },
+    '8dwt67ux': {
+      'sw': '/mwezi',
+      'en': '/month',
+    },
+    '9bnahj9d': {
+      'sw': 'kwa miaka 10.',
+      'en': 'for 10 years.',
     },
     'cqokg94o': {
       'sw': 'Huduma ',
@@ -1430,15 +1474,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'b3vuv5j4': {
       'sw':
-          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing bila kulipa malipo yoyote ya mwanzo (0.00 Tsh).\nKisha utailipa pesa iliyotumika kujenga nyumba na riba yake kidogo kidogo kwa muda wa mpaka miaka 25 ukiwa kwenye mjengo wako.\nGharama za kufungua faili ni 15,000 /= Tu.',
+          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing.\n\n1 Bila kulipa gharama ya mwanzo ambayo ni 15% ya gharama ya ujenzi.\n\n2 Na kama hauna kiwanja tutakupatia mkopo wa nyumba na kiwanja.\n\n3 Tukusaidie kupata hati miliki ya kiwanja BURE.\n\n4 Tukukopeshe kwa riba nafuu mpaka 2% badala ya riba ya sasa ya bank ambayo ni mpaka 98% kwa miaka 10.',
       'en':
-          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing bila kulipa malipo yoyote ya mwanzo (0.00 Tsh).\nKisha utailipa pesa iliyotumika kujenga nyumba na riba yake kidogo kidogo kwa muda wa mpaka miaka 25 ukiwa kwenye mjengo wako.\nGharama za kufungua faili ni 15,000 /= Tu.',
+          'Fungua faili la huduma yetu Leo upate ofa ya kujengewa nyumba utakayoichagua kwanzia msingi mpaka finishing.\n\n1 Bila kulipa gharama ya mwanzo ambayo ni 15% ya gharama ya ujenzi.\n\n2 Na kama hauna kiwanja tutakupatia mkopo wa nyumba na kiwanja.\n\n3 Tukusaidie kupata hati miliki ya kiwanja BURE.\n\n4 Tukukopeshe kwa riba nafuu mpaka 2% badala ya riba ya sasa ya bank ambayo ni mpaka 98% kwa miaka 10.\n',
     },
     'w69gapxm': {
       'sw':
-          'Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
+          'Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi WhatsApp: 0694004469.',
       'en':
-          'Anza kupata huduma yetu kwa kufungua faili lako SASA. Au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi.',
+          'Anza kupata huduma yetu kwa kufungua faili lako SASA kwa 15,000/= tu au unaweza tembelea ofisi zetu kufungua faili. Kwa maswali zaidi wasiliana nasi WhatsApp: 0694004469.',
     },
     'lxzdc7h7': {
       'sw': 'FUNGUA FAILI',
@@ -1811,17 +1855,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'xdoj5btj': {
       'sw':
-          'Jinsi ya Kulipa - TIGO PESA\n1. Piga *150*01# ili kupata menyu yako ya Tigo Pesa. \n2. Chagua 1 \'Tuma Pesa\'.\n3. Chagua 3 \'Mitandao mingine\'.\n4. Chagua 3 \'M-PESA\'. \n5. Ingiza namba sahihi kuendelea \'5351999\'\n6. Ingiza kiasi: \"100000\".\n7. Thibitisha maelezo ya ankara na weka nambari ya siri .',
+          'Jinsi ya Kulipa - TIGO PESA\n1. Piga *150*01# ili kupata menyu yako ya Tigo Pesa. \n2. Chagua 1 \'Tuma Pesa\'.\n3. Chagua 3 \'Mitandao mingine\'.\n4. Chagua 3 \'M-PESA\'. \n5. Ingiza namba sahihi kuendelea \'5351999\'\n6. Ingiza kiasi: \"15000\".\n7. Thibitisha maelezo ya ankara na weka nambari ya siri .',
       'en':
-          'How To Pay - TIGO PESA\n1. Dial *150*01# to get your Tigo Pesa Menu.\n2. Select 1 for ”Send money”.\n3. Select 3 for “To other networks”.\n4. Select 3 for “M-PESA”.\n5. Enter collect number to proceed: \"5351999\".\n6. Enter amount: “100000”.\n7. Confirm details and Enter PIN. ',
+          'How To Pay - TIGO PESA\n1. Dial *150*01# to get your Tigo Pesa Menu.\n2. Select 1 for ”Send money”.\n3. Select 3 for “To other networks”.\n4. Select 3 for “M-PESA”.\n5. Enter collect number to proceed: \"5351999\".\n6. Enter amount: “15000”.\n7. Confirm details and Enter PIN. ',
     },
     '4240mx98': {
       'sw': 'Namba ya kampuni:',
       'en': 'Business Number:',
     },
     'm8ojtoos': {
-      'sw': '351999',
-      'en': '351999',
+      'sw': '5351999',
+      'en': '5351999',
     },
     'tii17c7q': {
       'sw': 'Jina la kampuni:',
@@ -1852,9 +1896,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'mrv7shfz': {
       'sw':
-          'Jinsi ya Kulipa - M-PESA\n1. Piga *150*00# ili kupata menyu yako ya M-PESA. \n2. Chagua 4 \'Lipa Bili\'.\n3. Chagua 3 \'Ingiza namba ya Kampuni\'.\n4. Ingiza namba ya Kampuni:  \'351999\'. \n5. Weka Kumbukumbu namba: \"123\".\n6. Ingiza kiasi: \"100000\".\n7. Thibitisha maelezo ya ankara na weka nambari ya siri .',
+          'Jinsi ya Kulipa - M-PESA\n1. Piga *150*00# ili kupata menyu yako ya M-PESA. \n2. Chagua 4 \'Lipa Bili\'.\n3. Chagua 3 \'Ingiza namba ya Kampuni\'.\n4. Ingiza namba ya Kampuni:  \'351999\'. \n5. Weka Kumbukumbu namba: \"123\".\n6. Ingiza kiasi: \"15000\".\n7. Thibitisha maelezo ya ankara na weka nambari ya siri .',
       'en':
-          'How To Pay -  M-PESA\n1. Dial *150*00# to get your M-PESA Menu.\n2. Select 4 for  “Pay by M-PESA”.\n3. Select 4 for “Enter  Business Number ”.\n4. Enter business number: “5351999”.\n5. Enter Reference Number: \"123\".\n6. Enter amount: “100000”.\n7. Enter PIN. ',
+          'How To Pay -  M-PESA\n1. Dial *150*00# to get your M-PESA Menu.\n2. Select 4 for  “Pay by M-PESA”.\n3. Select 4 for “Enter  Business Number ”.\n4. Enter business number: “5351999”.\n5. Enter Reference Number: \"123\".\n6. Enter amount: “15000”.\n7. Enter PIN. ',
     },
     '6uq3dv0c': {
       'sw': 'Namba ya kampuni:',
@@ -1901,9 +1945,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '70d67urv': {
       'sw':
-          'Jinsi ya Kulipa - Airtel Money\n1. Piga *150*60# ili kupata menyu yako ya Airtel Money. \n2. Chagua 1 \'Tuma Pesa\'.\n3. Chagua 2 \'Tuma mitandao minginei\'.\n4. Chagua 2 \'M-PESA\'. \n5.  Chagua 2 \'Weka lipa namba ya M-PESA\'.\n6. Chagua 1 \'Weka lipa namba ya M-PESA\'.\n7. Ingiza namba ya simu \"5351999\".\n8. Ingiza kiasi cha pesa unachotaka kutuma. \'10000\'.\n9. Hakiki taarifa na uingize namba ya siri.',
+          'Jinsi ya Kulipa - Airtel Money\n1. Piga *150*60# ili kupata menyu yako ya Airtel Money. \n2. Chagua 1 \'Tuma Pesa\'.\n3. Chagua 2 \'Tuma mitandao minginei\'.\n4. Chagua 2 \'M-PESA\'. \n5.  Chagua 2 \'Weka lipa namba ya M-PESA\'.\n6. Chagua 1 \'Weka lipa namba ya M-PESA\'.\n7. Ingiza namba ya simu \"5351999\".\n8. Ingiza kiasi cha pesa unachotaka kutuma. \'15000\'.\n9. Hakiki taarifa na uingize namba ya siri.',
       'en':
-          'How To Pay -  Airtel Money\n1. Dial *150*60# to get your Airtel Money Menu.\n2. Select 1 for  ”Send Money\".\n3. Select 2 for “Send to other network”.\n4. Select 2 for “M-PESA”.\n5.  Select 2 for “Pay M-PESA Merchant”..\n6. Select 1 for “Enter M-PESA Merchant number”.\n7. Enter Phone number: \"5351999\".\n8. Enter Amount: \"10000\".\n9. Confirm details and Enter PIN. \n',
+          'How To Pay -  Airtel Money\n1. Dial *150*60# to get your Airtel Money Menu.\n2. Select 1 for  ”Send Money\".\n3. Select 2 for “Send to other network”.\n4. Select 2 for “M-PESA”.\n5.  Select 2 for “Pay M-PESA Merchant”..\n6. Select 1 for “Enter M-PESA Merchant number”.\n7. Enter Phone number: \"5351999\".\n8. Enter Amount: \"15000\".\n9. Confirm details and Enter PIN. \n',
     },
     'c173wnju': {
       'sw': 'Namba ya kampuni:',
@@ -1942,9 +1986,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'h4e63e3m': {
       'sw':
-          'Jinsi ya Kulipa -CRDB Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"100000\".\n6. Weka nambari ya siri ya benki.',
+          'Jinsi ya Kulipa -CRDB Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"15000\".\n6. Weka nambari ya siri ya benki.',
       'en':
-          'How To Pay -  CRDB Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “100000”.\n7. Enter bank PIN. ',
+          'How To Pay -  CRDB Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “15000”.\n7. Enter bank PIN. ',
     },
     'o2h7kltm': {
       'sw': 'Namba ya kampuni:',
@@ -1975,9 +2019,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '9o0q4ap8': {
       'sw':
-          'Jinsi ya Kulipa - NMB Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"100000\".\n6. Weka nambari ya siri ya benki.',
+          'Jinsi ya Kulipa - NMB Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"15000\".\n6. Weka nambari ya siri ya benki.',
       'en':
-          'How To Pay -  NMB Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “100000”.\n7. Enter bank PIN. ',
+          'How To Pay -  NMB Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “15000”.\n7. Enter bank PIN. ',
     },
     '7howkcyx': {
       'sw': 'Namba ya kampuni:',
@@ -2008,9 +2052,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'djfluozh': {
       'sw':
-          'Jinsi ya Kulipa - Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"100000\".\n6. Weka nambari ya siri ya benki.',
+          'Jinsi ya Kulipa - Bank\n1. Piga *150*  # ili kupata menyu yako ya  Benk.\n2. Chagua Malipo.\n3. Chagua Lipa kwa M-PESA.\n4. Weka namba ya simu:  \'5351999\'. \n5. Weka kiasi: \"15000\".\n6. Weka nambari ya siri ya benki.',
       'en':
-          'How To Pay -  Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “100000”.\n7. Enter bank PIN. ',
+          'How To Pay -  Bank\n1. Dial *150*# to get your bank menu.\n2. Select Pay.\n3. Select Pay by M-PESA.\n4. Enter phone number: “5351999”.\n5. Enter amount: “15000”.\n7. Enter bank PIN. ',
     },
     'evb0mvtz': {
       'sw': 'Namba ya kampuni:',
@@ -2459,6 +2503,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Above 3,000,000/=',
     },
     'bqdh3tmy': {
+      'sw': 'chagua...',
+      'en': 'Please select ...',
+    },
+    'cruy6lu4': {
+      'sw': 'Do you have 15% down-payment?',
+      'en': 'Una 15% ya malipo ya awali?',
+    },
+    'ltsu5yai': {
+      'sw': 'Chini ya 1,000,000/=',
+      'en': 'Below 1,000,000/=',
+    },
+    'pqsjicxr': {
+      'sw': 'Kati ya: 1,000,000/= mpaka 2,000,000/=',
+      'en': 'Range: From 1,000,000/= to 2,000,000/=',
+    },
+    'ohylo4td': {
+      'sw': 'Kati ya:  2,000,000/= mpaka 3,000,000/=',
+      'en': 'Range: From 2,000,000/=  to 3,500,000/=',
+    },
+    'p602u6o1': {
+      'sw': 'Juu ya 3,000,000/= ',
+      'en': 'Above 3,000,000/=',
+    },
+    'b1ifpd0g': {
       'sw': 'chagua...',
       'en': 'Please select ...',
     },

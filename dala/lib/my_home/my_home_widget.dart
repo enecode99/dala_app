@@ -487,8 +487,8 @@ bajeti... */
                                     'rvv3aqq9' /* Agiza */,
                                   ),
                                   options: FFButtonOptions(
-                                    width: 130,
-                                    height: 40,
+                                    width: 110,
+                                    height: 35,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -708,7 +708,7 @@ bajeti... */
                                       child: Text(
                                         functions.formatPrice15(
                                             listViewHouseRecord.housePrice
-                                                .toDouble()),
+                                                ?.toDouble()),
                                         style: FlutterFlowTheme.of(context)
                                             .subtitle1
                                             .override(

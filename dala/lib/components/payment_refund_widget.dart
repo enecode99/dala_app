@@ -213,7 +213,7 @@ class _PaymentRefundWidgetState extends State<PaymentRefundWidget> {
                     final transactionsCreateData = createTransactionsRecordData(
                       transactionDate: getCurrentTimestamp,
                       transactionUser: currentUserReference,
-                      transactionPrice: widget.planTrans.paidGoal.toString(),
+                      transactionPrice: widget.planTrans.paidGoal?.toString(),
                       transactionPhone: textController.text,
                       mobileMoney: radioButtonValue,
                       refund: true,
@@ -226,7 +226,7 @@ class _PaymentRefundWidgetState extends State<PaymentRefundWidget> {
 
                     final housePlansUpdateData = createHousePlansRecordData(
                       paidGoal: functions.deffPaid(
-                          widget.planTrans.paidGoal.toString(),
+                          widget.planTrans.paidGoal?.toString(),
                           widget.planTrans.paidGoal),
                     );
                     await widget.planTrans.reference

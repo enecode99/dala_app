@@ -39,6 +39,10 @@ abstract class UserFilesRecord
   DateTime get currentTime;
 
   @nullable
+  @BuiltValueField(wireName: 'down-payment')
+  String get downPayment;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -47,7 +51,8 @@ abstract class UserFilesRecord
     ..employmentStatus = ''
     ..monthlyIncome = ''
     ..titleDeed = ''
-    ..timeDuration = '';
+    ..timeDuration = ''
+    ..downPayment = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('user_files');
@@ -78,6 +83,7 @@ Map<String, dynamic> createUserFilesRecordData({
   String titleDeed,
   String timeDuration,
   DateTime currentTime,
+  String downPayment,
 }) =>
     serializers.toFirestore(
         UserFilesRecord.serializer,
@@ -88,4 +94,5 @@ Map<String, dynamic> createUserFilesRecordData({
           ..monthlyIncome = monthlyIncome
           ..titleDeed = titleDeed
           ..timeDuration = timeDuration
-          ..currentTime = currentTime));
+          ..currentTime = currentTime
+          ..downPayment = downPayment));

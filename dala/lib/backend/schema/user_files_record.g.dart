@@ -71,6 +71,13 @@ class _$UserFilesRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(DateTime)));
     }
+    value = object.downPayment;
+    if (value != null) {
+      result
+        ..add('down-payment')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -124,6 +131,10 @@ class _$UserFilesRecordSerializer
           result.currentTime = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'down-payment':
+          result.downPayment = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -153,10 +164,12 @@ class _$UserFilesRecord extends UserFilesRecord {
   @override
   final DateTime currentTime;
   @override
+  final String downPayment;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$UserFilesRecord([void Function(UserFilesRecordBuilder) updates]) =>
-      (new UserFilesRecordBuilder()..update(updates)).build();
+      (new UserFilesRecordBuilder()..update(updates))._build();
 
   _$UserFilesRecord._(
       {this.userName,
@@ -166,6 +179,7 @@ class _$UserFilesRecord extends UserFilesRecord {
       this.titleDeed,
       this.timeDuration,
       this.currentTime,
+      this.downPayment,
       this.reference})
       : super._();
 
@@ -188,6 +202,7 @@ class _$UserFilesRecord extends UserFilesRecord {
         titleDeed == other.titleDeed &&
         timeDuration == other.timeDuration &&
         currentTime == other.currentTime &&
+        downPayment == other.downPayment &&
         reference == other.reference;
   }
 
@@ -199,19 +214,21 @@ class _$UserFilesRecord extends UserFilesRecord {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc(0, userName.hashCode),
-                                employmentStatus.hashCode),
-                            user.hashCode),
-                        monthlyIncome.hashCode),
-                    titleDeed.hashCode),
-                timeDuration.hashCode),
-            currentTime.hashCode),
+                            $jc(
+                                $jc($jc(0, userName.hashCode),
+                                    employmentStatus.hashCode),
+                                user.hashCode),
+                            monthlyIncome.hashCode),
+                        titleDeed.hashCode),
+                    timeDuration.hashCode),
+                currentTime.hashCode),
+            downPayment.hashCode),
         reference.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('UserFilesRecord')
+    return (newBuiltValueToStringHelper(r'UserFilesRecord')
           ..add('userName', userName)
           ..add('employmentStatus', employmentStatus)
           ..add('user', user)
@@ -219,6 +236,7 @@ class _$UserFilesRecord extends UserFilesRecord {
           ..add('titleDeed', titleDeed)
           ..add('timeDuration', timeDuration)
           ..add('currentTime', currentTime)
+          ..add('downPayment', downPayment)
           ..add('reference', reference))
         .toString();
   }
@@ -258,6 +276,10 @@ class UserFilesRecordBuilder
   DateTime get currentTime => _$this._currentTime;
   set currentTime(DateTime currentTime) => _$this._currentTime = currentTime;
 
+  String _downPayment;
+  String get downPayment => _$this._downPayment;
+  set downPayment(String downPayment) => _$this._downPayment = downPayment;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -277,6 +299,7 @@ class UserFilesRecordBuilder
       _titleDeed = $v.titleDeed;
       _timeDuration = $v.timeDuration;
       _currentTime = $v.currentTime;
+      _downPayment = $v.downPayment;
       _reference = $v.reference;
       _$v = null;
     }
@@ -295,7 +318,9 @@ class UserFilesRecordBuilder
   }
 
   @override
-  _$UserFilesRecord build() {
+  UserFilesRecord build() => _build();
+
+  _$UserFilesRecord _build() {
     final _$result = _$v ??
         new _$UserFilesRecord._(
             userName: userName,
@@ -305,10 +330,11 @@ class UserFilesRecordBuilder
             titleDeed: titleDeed,
             timeDuration: timeDuration,
             currentTime: currentTime,
+            downPayment: downPayment,
             reference: reference);
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

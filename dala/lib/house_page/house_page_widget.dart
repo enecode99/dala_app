@@ -1,6 +1,5 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../card_page/card_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -164,19 +163,19 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '9capem0p' /* Kiwango: Chini */,
+                                                'h63tln29' /* Kiwango: Chini */,
                                               ),
                                             ),
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '9274fmss' /* Kiwango: Kati */,
+                                                'ygurt8ns' /* Kiwango: Kati */,
                                               ),
                                             ),
                                             Tab(
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '1npucdxy' /* Kiwango: Juu */,
+                                                'vl4s339y' /* Kiwango: Juu */,
                                               ),
                                             ),
                                           ],
@@ -239,7 +238,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'blwzie6g' /* GHARAMA: */,
+                                                                    '3dpikfrh' /* GHARAMA: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -325,7 +324,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'wjrlaiuz' /* LIPA: */,
+                                                                  '898divf8' /* LIPA: */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -361,7 +360,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 functions.formatPrice15(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -383,202 +382,149 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                         ],
                                                       ),
                                                     ),
-                                                    Stack(
-                                                      children: [
-                                                        Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      39.79,
-                                                                      0.73),
-                                                              child: Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5,
                                                                             0,
                                                                             0,
-                                                                            0),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                      child:
-                                                                          Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          '06ib3yh8' /* OFA YAKO */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .subtitle1
-                                                                            .override(
-                                                                              fontFamily: 'Open Sans',
-                                                                              color: FlutterFlowTheme.of(context).primaryColor,
-                                                                              fontSize: 14,
-                                                                              fontWeight: FontWeight.w600,
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional
-                                                                          .fromSTEB(
-                                                                              3,
-                                                                              0,
-                                                                              3,
-                                                                              0),
-                                                                      child:
-                                                                          Icon(
-                                                                        Icons
-                                                                            .arrow_right_alt,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryColor,
-                                                                        size:
-                                                                            24,
-                                                                      ),
-                                                                    ),
-                                                                    Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                      child:
-                                                                          Text(
-                                                                        FFLocalizations.of(context)
-                                                                            .getText(
-                                                                          'ci0updc6' /* LIPA: */,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .subtitle1
-                                                                            .override(
-                                                                              fontFamily: 'Open Sans',
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              fontSize: 14,
-                                                                              fontWeight: FontWeight.w600,
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                    Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            15,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                            Text(
-                                                                          FFLocalizations.of(context)
-                                                                              .getText(
-                                                                            '6gg58ur3' /* 0.000/= */,
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          widget
+                                                                              .house
+                                                                              .housePrice,
+                                                                          functions
+                                                                              .price15(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
                                                                           ),
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .subtitle1
-                                                                              .override(
-                                                                                fontFamily: 'Open Sans',
-                                                                                color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                fontSize: 14,
-                                                                                fontWeight: FontWeight.w600,
-                                                                              ),
-                                                                        ),
-                                                                      ),
                                                                     ),
-                                                                  ],
-                                                                ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'ze71f3nu' /* /mwezi */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
                                                               ),
-                                                            ),
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.2, 0),
-                                                              child: Padding(
+                                                              Padding(
                                                                 padding:
                                                                     EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            0,
                                                                             5,
                                                                             0,
-                                                                            0),
-                                                                child:
-                                                                    FFButtonWidget(
-                                                                  onPressed:
-                                                                      () async {
-                                                                    logFirebaseEvent(
-                                                                        'HOUSE_FUNGUA_OFA_YAKO_BTN_ON_TAP');
-                                                                    logFirebaseEvent(
-                                                                        'Button_Navigate-To');
-                                                                    await Navigator
-                                                                        .push(
-                                                                      context,
-                                                                      PageTransition(
-                                                                        type: PageTransitionType
-                                                                            .fade,
-                                                                        duration:
-                                                                            Duration(milliseconds: 0),
-                                                                        reverseDuration:
-                                                                            Duration(milliseconds: 0),
-                                                                        child:
-                                                                            CardPageWidget(),
-                                                                      ),
-                                                                    );
-                                                                    logFirebaseEvent(
-                                                                        'Button_Google-Analytics-Event');
-                                                                    logFirebaseEvent(
-                                                                        currentPhoneNumber);
-                                                                  },
-                                                                  text: FFLocalizations.of(
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'xw5gsk96' /* FUNGUA OFA YAKO */,
+                                                                    's4ay2r4w' /* kwa miaka 10. */,
                                                                   ),
-                                                                  options:
-                                                                      FFButtonOptions(
-                                                                    width: 135,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryColor,
-                                                                    textStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .subtitle2
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Open Sans',
-                                                                          color:
-                                                                              Colors.white,
-                                                                          fontSize:
-                                                                              12,
-                                                                        ),
-                                                                    borderSide:
-                                                                        BorderSide(
-                                                                      color: Colors
-                                                                          .transparent,
-                                                                      width: 1,
-                                                                    ),
-                                                                    borderRadius:
-                                                                        BorderRadius
-                                                                            .circular(8),
-                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
                                                                 ),
                                                               ),
-                                                            ),
-                                                          ],
+                                                            ],
+                                                          ),
                                                         ),
-                                                      ],
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
@@ -636,7 +582,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'tw496qve' /* GHARAMA: */,
+                                                                    'extqlov4' /* GHARAMA: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -722,7 +668,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '8r09udth' /* LIPA: */,
+                                                                  '9txfhfxd' /* LIPA: */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -758,7 +704,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 functions.formatPrice15M(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -780,219 +726,149 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                         ],
                                                       ),
                                                     ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  39.79, 0.73),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5,
-                                                                        0,
-                                                                        0,
-                                                                        0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'bvm0jvqo' /* OFA YAKO */,
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .subtitle1
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Open Sans',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primaryColor,
-                                                                          fontSize:
-                                                                              14,
-                                                                          fontWeight:
-                                                                              FontWeight.w600,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          3,
-                                                                          0,
-                                                                          3,
-                                                                          0),
-                                                                  child: Icon(
-                                                                    Icons
-                                                                        .arrow_right_alt,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryColor,
-                                                                    size: 24,
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'fhkrech0' /* LIPA: */,
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .subtitle1
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Open Sans',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryText,
-                                                                          fontSize:
-                                                                              14,
-                                                                          fontWeight:
-                                                                              FontWeight.w600,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child:
-                                                                      Padding(
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            15,
+                                                                            5,
                                                                             0,
                                                                             0,
-                                                                            0),
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          functions.midPrice(widget
+                                                                              .house
+                                                                              .housePrice),
+                                                                          functions
+                                                                              .price15M(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        'kooyzt53' /* 0.000/= */,
+                                                                        'iq3xrry0' /* /mwezi */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .subtitle1
+                                                                          .bodyText1
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Open Sans',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primaryColor,
+                                                                                'Poppins',
                                                                             fontSize:
-                                                                                14,
-                                                                            fontWeight:
-                                                                                FontWeight.w600,
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
                                                                           ),
                                                                     ),
                                                                   ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.2, 0),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0,
-                                                                        5,
-                                                                        0,
-                                                                        0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed:
-                                                                  () async {
-                                                                logFirebaseEvent(
-                                                                    'HOUSE_FUNGUA_OFA_YAKO_BTN_ON_TAP');
-                                                                logFirebaseEvent(
-                                                                    'Button_Navigate-To');
-                                                                await Navigator
-                                                                    .push(
-                                                                  context,
-                                                                  PageTransition(
-                                                                    type: PageTransitionType
-                                                                        .fade,
-                                                                    duration: Duration(
-                                                                        milliseconds:
-                                                                            0),
-                                                                    reverseDuration:
-                                                                        Duration(
-                                                                            milliseconds:
-                                                                                0),
-                                                                    child:
-                                                                        CardPageWidget(),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'h0s8if5z' /* kwa miaka 10. */,
                                                                   ),
-                                                                );
-                                                                logFirebaseEvent(
-                                                                    'Button_Google-Analytics-Event');
-                                                                logFirebaseEvent(
-                                                                    currentPhoneNumber);
-                                                              },
-                                                              text: FFLocalizations
-                                                                      .of(context)
-                                                                  .getText(
-                                                                'ju0y0jga' /* FUNGUA OFA YAKO */,
-                                                              ),
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 135,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryColor,
-                                                                textStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Open Sans',
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontSize:
-                                                                          12,
-                                                                    ),
-                                                                borderSide:
-                                                                    BorderSide(
-                                                                  color: Colors
-                                                                      .transparent,
-                                                                  width: 1,
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
                                                                 ),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            8),
                                                               ),
-                                                            ),
+                                                            ],
                                                           ),
                                                         ),
-                                                      ],
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
@@ -1050,7 +926,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                   FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'b71a1cob' /* GHARAMA: */,
+                                                                    'tgpqdnes' /* GHARAMA: */,
                                                                   ),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1136,7 +1012,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'ru94ae7j' /* LIPA: */,
+                                                                  'v75e7hkw' /* LIPA: */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1172,7 +1048,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                                 functions.formatPrice15H(widget
                                                                     .house
                                                                     .housePrice
-                                                                    .toDouble()),
+                                                                    ?.toDouble()),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .subtitle1
@@ -1194,219 +1070,149 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                                                         ],
                                                       ),
                                                     ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  39.79, 0.73),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5,
-                                                                        0,
-                                                                        0,
-                                                                        0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'hpgftlq3' /* OFA YAKO */,
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .subtitle1
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Open Sans',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primaryColor,
-                                                                          fontSize:
-                                                                              14,
-                                                                          fontWeight:
-                                                                              FontWeight.w600,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          3,
-                                                                          0,
-                                                                          3,
-                                                                          0),
-                                                                  child: Icon(
-                                                                    Icons
-                                                                        .arrow_right_alt,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryColor,
-                                                                    size: 24,
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'g6f7keu7' /* LIPA: */,
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .subtitle1
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Open Sans',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryText,
-                                                                          fontSize:
-                                                                              14,
-                                                                          fontWeight:
-                                                                              FontWeight.w600,
-                                                                        ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.13,
-                                                                          0.78),
-                                                                  child:
-                                                                      Padding(
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0, 10, 0, 0),
+                                                      child: Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 2,
+                                                              color: Color(
+                                                                  0x33000000),
+                                                              offset:
+                                                                  Offset(0, 2),
+                                                              spreadRadius: 1,
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    10),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    10),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      10, 0, 0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            children: [
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            15,
+                                                                            5,
                                                                             0,
                                                                             0,
-                                                                            0),
+                                                                            5),
+                                                                    child: Text(
+                                                                      functions.formatPrice(functions.montlyPayment(
+                                                                          functions.highPrice(widget
+                                                                              .house
+                                                                              .housePrice),
+                                                                          functions
+                                                                              .price15H(widget.house.housePrice)
+                                                                              .toString())),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyText1
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Poppins',
+                                                                            fontSize:
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            5),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
                                                                           .getText(
-                                                                        '8a0ea362' /* 0.000/= */,
+                                                                        'r8szwsve' /* /mwezi */,
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .subtitle1
+                                                                          .bodyText1
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Open Sans',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primaryColor,
+                                                                                'Poppins',
                                                                             fontSize:
-                                                                                14,
-                                                                            fontWeight:
-                                                                                FontWeight.w600,
+                                                                                13,
+                                                                            fontStyle:
+                                                                                FontStyle.italic,
                                                                           ),
                                                                     ),
                                                                   ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.2, 0),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0,
-                                                                        5,
-                                                                        0,
-                                                                        0),
-                                                            child:
-                                                                FFButtonWidget(
-                                                              onPressed:
-                                                                  () async {
-                                                                logFirebaseEvent(
-                                                                    'HOUSE_FUNGUA_OFA_YAKO_BTN_ON_TAP');
-                                                                logFirebaseEvent(
-                                                                    'Button_Navigate-To');
-                                                                await Navigator
-                                                                    .push(
-                                                                  context,
-                                                                  PageTransition(
-                                                                    type: PageTransitionType
-                                                                        .fade,
-                                                                    duration: Duration(
-                                                                        milliseconds:
-                                                                            0),
-                                                                    reverseDuration:
-                                                                        Duration(
-                                                                            milliseconds:
-                                                                                0),
-                                                                    child:
-                                                                        CardPageWidget(),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            5,
+                                                                            0,
+                                                                            0,
+                                                                            5),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'su1ktwtz' /* kwa miaka 10. */,
                                                                   ),
-                                                                );
-                                                                logFirebaseEvent(
-                                                                    'Button_Google-Analytics-Event');
-                                                                logFirebaseEvent(
-                                                                    currentPhoneNumber);
-                                                              },
-                                                              text: FFLocalizations
-                                                                      .of(context)
-                                                                  .getText(
-                                                                'pjo89omq' /* FUNGUA OFA YAKO */,
-                                                              ),
-                                                              options:
-                                                                  FFButtonOptions(
-                                                                width: 135,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryColor,
-                                                                textStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .subtitle2
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Open Sans',
-                                                                      color: Colors
-                                                                          .white,
-                                                                      fontSize:
-                                                                          12,
-                                                                    ),
-                                                                borderSide:
-                                                                    BorderSide(
-                                                                  color: Colors
-                                                                      .transparent,
-                                                                  width: 1,
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Poppins',
+                                                                        fontSize:
+                                                                            14,
+                                                                        fontStyle:
+                                                                            FontStyle.italic,
+                                                                      ),
                                                                 ),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            8),
                                                               ),
-                                                            ),
+                                                            ],
                                                           ),
                                                         ),
-                                                      ],
+                                                      ),
                                                     ),
                                                   ],
                                                 ),
@@ -1424,7 +1230,7 @@ class _HousePageWidgetState extends State<HousePageWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0, 0.71),
+                        alignment: AlignmentDirectional(0, 0.46),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 320, 0, 0),
                           child: Column(
@@ -1744,237 +1550,227 @@ class _HousePageWidgetState extends State<HousePageWidget> {
             ),
             Align(
               alignment: AlignmentDirectional(0, 1.11),
-              child: Material(
-                color: Colors.transparent,
-                elevation: 10,
-                shape: RoundedRectangleBorder(
+              child: Container(
+                width: double.infinity,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).tertiaryColor,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 4,
+                      color: Color(0x33000000),
+                      offset: Offset(0, -1),
+                      spreadRadius: 1,
+                    )
+                  ],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0),
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                  ),
+                  border: Border.all(
+                    color: FlutterFlowTheme.of(context).tertiaryColor,
                   ),
                 ),
-                child: Container(
-                  width: double.infinity,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).tertiaryColor,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
-                      bottomRight: Radius.circular(0),
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                    ),
-                    border: Border.all(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 29),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 5),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'nj3s6sh1' /* "Kila Mtu Kwake." */,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(5, 0, 0, 5),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'hkwaafye' /* "Kila mtu kwake" */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 14,
+                                        fontStyle: FontStyle.italic,
+                                      ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 16,
-                                      fontStyle: FontStyle.italic,
-                                    ),
                               ),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                if (!(valueOrDefault(
-                                        currentUserDocument?.planAvailable,
-                                        false)) ??
-                                    true)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5, 0, 0, 0),
-                                    child: AuthUserStreamWidget(
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          logFirebaseEvent(
-                                              'HOUSE_PAGE_PAGE_CHAGUA_NYUMBA_BTN_ON_TAP');
-                                          logFirebaseEvent(
-                                              'Button_Backend-Call');
+                            ],
+                          ),
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              if (!valueOrDefault<bool>(
+                                  currentUserDocument?.planAvailable, false))
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      5, 0, 0, 0),
+                                  child: AuthUserStreamWidget(
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        logFirebaseEvent(
+                                            'HOUSE_PAGE_PAGE_CHAGUA_NYUMBA_BTN_ON_TAP');
+                                        logFirebaseEvent('Button_Backend-Call');
 
-                                          final usersUpdateData =
-                                              createUsersRecordData(
-                                            planAvailable: true,
-                                          );
-                                          await currentUserReference
-                                              .update(usersUpdateData);
-                                          logFirebaseEvent(
-                                              'Button_Backend-Call');
+                                        final usersUpdateData =
+                                            createUsersRecordData(
+                                          planAvailable: true,
+                                        );
+                                        await currentUserReference
+                                            .update(usersUpdateData);
+                                        logFirebaseEvent('Button_Backend-Call');
 
-                                          final housePlansCreateData =
-                                              createHousePlansRecordData(
-                                            planHouse: widget.house.reference,
-                                            userPlan: currentUserReference,
-                                            houseRenovation: false,
-                                            planTime: getCurrentTimestamp,
-                                          );
-                                          await HousePlansRecord.collection
-                                              .doc()
-                                              .set(housePlansCreateData);
-                                          logFirebaseEvent(
-                                              'Button_Navigate-To');
-                                          await Navigator.push(
-                                            context,
-                                            PageTransition(
-                                              type: PageTransitionType.fade,
-                                              duration:
-                                                  Duration(milliseconds: 0),
-                                              reverseDuration:
-                                                  Duration(milliseconds: 0),
-                                              child: NavBarPage(
-                                                  initialPage: 'MyAccountPage'),
-                                            ),
-                                          );
-                                        },
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          '6ag8ad9t' /* CHAGUA NYUMBA */,
-                                        ),
-                                        icon: Icon(
-                                          Icons.payment,
-                                          size: 15,
-                                        ),
-                                        options: FFButtonOptions(
-                                          width: 200,
-                                          height: 50,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .subtitle2
-                                                  .override(
-                                                    fontFamily: 'Open Sans',
-                                                    color: Colors.white,
-                                                  ),
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1,
+                                        final housePlansCreateData =
+                                            createHousePlansRecordData(
+                                          planHouse: widget.house.reference,
+                                          userPlan: currentUserReference,
+                                          houseRenovation: false,
+                                          planTime: getCurrentTimestamp,
+                                        );
+                                        await HousePlansRecord.collection
+                                            .doc()
+                                            .set(housePlansCreateData);
+                                        logFirebaseEvent('Button_Navigate-To');
+                                        await Navigator.push(
+                                          context,
+                                          PageTransition(
+                                            type: PageTransitionType.fade,
+                                            duration: Duration(milliseconds: 0),
+                                            reverseDuration:
+                                                Duration(milliseconds: 0),
+                                            child: NavBarPage(
+                                                initialPage: 'MyAccountPage'),
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(12),
+                                        );
+                                      },
+                                      text: FFLocalizations.of(context).getText(
+                                        '6ag8ad9t' /* CHAGUA NYUMBA */,
+                                      ),
+                                      icon: Icon(
+                                        Icons.payment,
+                                        size: 15,
+                                      ),
+                                      options: FFButtonOptions(
+                                        width: 200,
+                                        height: 50,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryColor,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily: 'Open Sans',
+                                              color: Colors.white,
+                                            ),
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1,
                                         ),
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),
-                              ],
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                              child: StreamBuilder<List<HousePlansRecord>>(
-                                stream: queryHousePlansRecord(
-                                  queryBuilder: (housePlansRecord) =>
-                                      housePlansRecord.where('user_plan',
-                                          isEqualTo: currentUserReference),
-                                  singleRecord: true,
                                 ),
-                                builder: (context, snapshot) {
-                                  // Customize what your widget looks like when it's loading.
-                                  if (!snapshot.hasData) {
-                                    return Center(
-                                      child: SizedBox(
-                                        width: 50,
-                                        height: 50,
-                                        child: SpinKitCircle(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          size: 50,
-                                        ),
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                            child: StreamBuilder<List<HousePlansRecord>>(
+                              stream: queryHousePlansRecord(
+                                queryBuilder: (housePlansRecord) =>
+                                    housePlansRecord.where('user_plan',
+                                        isEqualTo: currentUserReference),
+                                singleRecord: true,
+                              ),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50,
+                                      height: 50,
+                                      child: SpinKitCircle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryColor,
+                                        size: 50,
                                       ),
-                                    );
-                                  }
-                                  List<HousePlansRecord>
-                                      buttonHousePlansRecordList =
-                                      snapshot.data;
-                                  // Return an empty Container when the document does not exist.
-                                  if (snapshot.data.isEmpty) {
-                                    return Container();
-                                  }
-                                  final buttonHousePlansRecord =
-                                      buttonHousePlansRecordList.isNotEmpty
-                                          ? buttonHousePlansRecordList.first
-                                          : null;
-                                  return FFButtonWidget(
-                                    onPressed: () async {
-                                      logFirebaseEvent(
-                                          'HOUSE_PAGE_PAGE_BADILI_BTN_ON_TAP');
-                                      logFirebaseEvent('Button_Backend-Call');
-
-                                      final housePlansUpdateData =
-                                          createHousePlansRecordData(
-                                        planPhoto: widget.house.housePhoto,
-                                        planHouse: widget.house.reference,
-                                      );
-                                      await buttonHousePlansRecord.reference
-                                          .update(housePlansUpdateData);
-                                      logFirebaseEvent('Button_Navigate-To');
-                                      await Navigator.push(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 0),
-                                          reverseDuration:
-                                              Duration(milliseconds: 0),
-                                          child: NavBarPage(
-                                              initialPage: 'MyAccountPage'),
-                                        ),
-                                      );
-                                    },
-                                    text: FFLocalizations.of(context).getText(
-                                      'mx0wk3cn' /* BADILI  */,
-                                    ),
-                                    icon: Icon(
-                                      Icons.payment,
-                                      size: 15,
-                                    ),
-                                    options: FFButtonOptions(
-                                      width: 185,
-                                      height: 40,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                            fontFamily: 'Open Sans',
-                                            color: Colors.white,
-                                          ),
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12),
                                     ),
                                   );
-                                },
-                              ),
+                                }
+                                List<HousePlansRecord>
+                                    buttonHousePlansRecordList = snapshot.data;
+                                // Return an empty Container when the document does not exist.
+                                if (snapshot.data.isEmpty) {
+                                  return Container();
+                                }
+                                final buttonHousePlansRecord =
+                                    buttonHousePlansRecordList.isNotEmpty
+                                        ? buttonHousePlansRecordList.first
+                                        : null;
+                                return FFButtonWidget(
+                                  onPressed: () async {
+                                    logFirebaseEvent(
+                                        'HOUSE_PAGE_PAGE_BADILI_BTN_ON_TAP');
+                                    logFirebaseEvent('Button_Backend-Call');
+
+                                    final housePlansUpdateData =
+                                        createHousePlansRecordData(
+                                      planPhoto: widget.house.housePhoto,
+                                      planHouse: widget.house.reference,
+                                    );
+                                    await buttonHousePlansRecord.reference
+                                        .update(housePlansUpdateData);
+                                    logFirebaseEvent('Button_Navigate-To');
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        duration: Duration(milliseconds: 0),
+                                        reverseDuration:
+                                            Duration(milliseconds: 0),
+                                        child: NavBarPage(
+                                            initialPage: 'MyAccountPage'),
+                                      ),
+                                    );
+                                  },
+                                  text: FFLocalizations.of(context).getText(
+                                    'mx0wk3cn' /* BADILI  */,
+                                  ),
+                                  icon: Icon(
+                                    Icons.payment,
+                                    size: 15,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: 185,
+                                    height: 40,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Open Sans',
+                                          color: Colors.white,
+                                        ),
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                );
+                              },
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),

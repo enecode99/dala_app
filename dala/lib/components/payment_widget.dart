@@ -253,7 +253,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                   onPressed: () async {
                     logFirebaseEvent('PAYMENT_COMP_LIPA_BTN_ON_TAP');
                     if (functions.minTrans(int.parse(textController2.text))) {
-                      if ((radioButtonValue) == 'Tigo Pesa') {
+                      if (radioButtonValue == 'Tigo Pesa') {
                         logFirebaseEvent('Button_Backend-Call');
 
                         final transactionsCreateData =
@@ -294,7 +294,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                         logFirebaseEvent('Button_Navigate-Back');
                         Navigator.pop(context);
                       } else {
-                        if ((radioButtonValue) == 'M-PESA') {
+                        if (radioButtonValue == 'M-PESA') {
                           logFirebaseEvent('Button_Backend-Call');
 
                           final transactionsCreateData =
@@ -336,7 +336,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                           await widget.planTrans.reference
                               .update(housePlansUpdateData);
                         } else {
-                          if ((radioButtonValue) == 'Airtel Money') {
+                          if (radioButtonValue == 'Airtel Money') {
                             logFirebaseEvent('Button_Backend-Call');
 
                             final transactionsCreateData =
@@ -378,7 +378,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             await widget.planTrans.reference
                                 .update(housePlansUpdateData);
                           } else {
-                            if ((radioButtonValue) == 'CRDB Bank') {
+                            if (radioButtonValue == 'CRDB Bank') {
                               logFirebaseEvent('Button_Backend-Call');
 
                               final transactionsCreateData =
@@ -421,7 +421,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                               await widget.planTrans.reference
                                   .update(housePlansUpdateData);
                             } else {
-                              if ((radioButtonValue) == 'NMB Bank') {
+                              if (radioButtonValue == 'NMB Bank') {
                                 logFirebaseEvent('Button_Backend-Call');
 
                                 final transactionsCreateData =
@@ -465,7 +465,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                 await widget.planTrans.reference
                                     .update(housePlansUpdateData);
                               } else {
-                                if ((radioButtonValue) == 'Other Banks') {
+                                if (radioButtonValue == 'Other Banks') {
                                   logFirebaseEvent('Button_Backend-Call');
 
                                   final transactionsCreateData =
